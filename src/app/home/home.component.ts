@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit {
 
     //Example grabbing data from (TestJson.json in assets folder)
     //Will be switched to grab LIVE data during the game.
-    this.leagueService.getGameData().subscribe(data => {
+    this.leagueService.getTestGameData().subscribe(data => {
       this.currentGold = data.activePlayer.currentGold;
       this.currentGameData = data;
     })
