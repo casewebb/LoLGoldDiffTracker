@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "LeagueProject"
+    }
+  },
+  "defaultProject": "LeagueProject",
+  "cli": {
+    "analytics": false
+  }
 }
