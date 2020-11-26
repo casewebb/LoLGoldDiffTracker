@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { ItemData, Datum } from '../interfaces/LeagueInterfaces';
+import { ItemData, Datum, Image } from '../interfaces/LeagueInterfaces';
 import { LeagueApiServiceService } from '../services/league-api-service.service'
 
 @Component({
@@ -17,7 +17,10 @@ export class HomeComponent implements OnInit {
   allItems: Array<Datum>;
 
   searchItem = new FormControl('');
+  searchItemName: string;
+  searchItemImage: Image;
   searchItemCost: string;
+  searchItemDescription: string;
 
   async ngOnInit() {
     await this.leagueService.getLatestGameVersion().toPromise().then(versions => {
@@ -42,9 +45,15 @@ export class HomeComponent implements OnInit {
     })
   }
 
+
   //Searching method for example on how to access specific item data
   search() {
-    this.searchItemCost = this.allItems.filter(item => item.name == this.searchItem.value)[0].gold.total.toString()
+    this.searchItemName = this.allItems.filter(item => item.name == this.searchItem.value)[0].name.toString();
+    this.searchItemImage = this.allItems.filter(item => item.name == this.searchItem.value)[0].image;
+    this.searchItemCost = this.allItems.filter(item => item.name == this.searchItem.value)[0].gold.total.toString();
+    this.searchItemDescription = this.allItems.filter(item => item.name == this.searchItem.value)[0].plaintext.toString();
+
+ 
   }
 
 }

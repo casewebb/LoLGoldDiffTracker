@@ -1,12 +1,23 @@
-<div>League Version {{currentLeagueVersion}}</div>
+<h1><div>League Version {{currentLeagueVersion}}</div>
 <div>Gold Testing Val {{currentGold}}</div>
+</h1>
 
+
+<h2>
 <div>
     <form>
         <label for="searchItem">Search Item: </label>
-        <input id="searchItem" [formControl]="searchItem">
+        <input id="searchItem" [formControl]="searchItem">  
+        &nbsp;
+        <button class="button button2" (click)="search()">Search</button>
     </form>
 </div>
-<button (click)="search()">Search</button>
+----------------------------------------------------------
+<div>{{searchItemName}} {{searchItemImage}} </div>
+
 
 <div>Item Cost: {{searchItemCost}}</div>
+
+<div>Item Description: {{searchItemDescription}}</div>
+
+</h2>
