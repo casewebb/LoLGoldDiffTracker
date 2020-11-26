@@ -19,12 +19,13 @@ export class HomeComponent implements OnInit {
 
   searchItem = new FormControl('');
   searchItemName: string;
-  searchItemImage: Image;
+  searchItemImage: string;
   searchItemCost: string;
   searchItemDescription: string;
   searchChamp = new FormControl('');
   champTotalGold: string;
   champImageUrl: string;
+  itemImageArr: Array<string>;
 
   async ngOnInit() {
     await this.leagueService.getLatestGameVersion().toPromise().then(versions => {
@@ -54,7 +55,7 @@ export class HomeComponent implements OnInit {
   //Searching method for example on how to access specific item data
   search() {
     this.searchItemName = this.allItems.filter(item => item.name == this.searchItem.value)[0].name.toString();
-    this.searchItemImage = this.allItems.filter(item => item.name == this.searchItem.value)[0].image;
+    this.searchItemImage = `http://ddragon.leagueoflegends.com/cdn/${this.currentLeagueVersion}/img/item/${this.allItems.filter(item => item.name == this.searchItem.value)[0].image.full}`;
     this.searchItemCost = this.allItems.filter(item => item.name == this.searchItem.value)[0].gold.total.toString();
     this.searchItemDescription = this.allItems.filter(item => item.name == this.searchItem.value)[0].plaintext.toString();
   }
@@ -64,8 +65,8 @@ export class HomeComponent implements OnInit {
   }
 
   setChampGoldVal() {
-    this.champTotalGold = this.getChampionsTotalGold(this.searchChamp.value).toString();
-    this.champImageUrl = `http://ddragon.leagueoflegends.com/cdn/${this.currentLeagueVersion}/img/champion/${this.searchChamp.value}.png`
+    this.champImageUrl = `http://ddragon.leagueoflegends.com/cdn/${this.currentLeagueVersion}/img/champion/${this.searchChamp.value}.png`;
+    this.getChampionsTotalGold(this.searchChamp.value);
   }
 
   getItemCost(itemName: string) {
@@ -75,12 +76,14 @@ export class HomeComponent implements OnInit {
   getChampionsTotalGold(champName: string) {
     let totalGold = 0;
     let champItems = this.currentGameData.allPlayers.filter(player => player.championName == champName)[0].items;
+    let itemImgArray = new Array<string>();
     
     for (var item of champItems) {
       totalGold += this.getItemCost(item.displayName);
+      itemImgArray.push(`http://ddragon.leagueoflegends.com/cdn/${this.currentLeagueVersion}/img/item/${item.itemID}.png`)
     }
-
-    return totalGold;
+    this.champTotalGold = totalGold.toString();
+    this.itemImageArr = itemImgArray;
   }
 
 }

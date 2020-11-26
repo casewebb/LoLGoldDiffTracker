@@ -1,24 +1,27 @@
-<h1><div>League Version {{currentLeagueVersion}}</div>
-<div>Gold Testing Val {{currentGold}}</div>
+<h1>
+    <div>League Version {{currentLeagueVersion}}</div>
+    <div>Gold Testing Val {{currentGold}}</div>
 </h1>
 
 
 <h2>
-<div>
-    <form>
-        <label for="searchItem">Search Item: </label>
-        <input id="searchItem" [formControl]="searchItem">  
-        &nbsp;
-        <button class="button button2" (click)="search()">Search</button>
-    </form>
-</div>
-----------------------------------------------------------
-<div>{{searchItemName}} {{searchItemImage}} </div>
+    <div>
+        <form>
+            <label for="searchItem">Search Item: </label>
+            <input id="searchItem" [formControl]="searchItem">
+            &nbsp;
+            <button class="button button2" (click)="search()">Search</button>
+        </form>
+    </div>
+    ----------------------------------------------------------
+    <div>{{searchItemName}}
+        <img src="{{searchItemImage}}">
+    </div>
 
 
-<div>Item Cost: {{searchItemCost}}</div>
+    <div>Item Cost: {{searchItemCost}}</div>
 
-<div>Item Description: {{searchItemDescription}}</div>
+    <div>Item Description: {{searchItemDescription}}</div>
 
 </h2>
 
@@ -33,3 +36,6 @@
 
 <div>Item Cost: {{champTotalGold}}</div>
 <img src="{{champImageUrl}}">
+<div>Items: </div>
+
+<img *ngFor="let image of itemImageArr" src="{{image}}">
