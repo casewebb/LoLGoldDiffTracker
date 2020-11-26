@@ -21,6 +21,7 @@ export class HomeComponent implements OnInit {
   searchChamp = new FormControl('');
   searchItemCost: string;
   champTotalGold: string;
+  champImageUrl: string;
 
   async ngOnInit() {
     await this.leagueService.getLatestGameVersion().toPromise().then(versions => {
@@ -53,6 +54,7 @@ export class HomeComponent implements OnInit {
 
   setChampGoldVal() {
     this.champTotalGold = this.getChampionsTotalGold(this.searchChamp.value).toString();
+    this.champImageUrl = `http://ddragon.leagueoflegends.com/cdn/${this.currentLeagueVersion}/img/champion/${this.searchChamp.value}.png`
   }
 
   getItemCost(itemName: string) {
