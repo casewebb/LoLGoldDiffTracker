@@ -92,7 +92,7 @@ export interface AllPlayer {
     championName:    string;
     isBot:           boolean;
     isDead:          boolean;
-    items:           ItemData[];
+    items:           ActiveItemData[];
     level:           number;
     position:        string;
     rawChampionName: string;
@@ -105,7 +105,7 @@ export interface AllPlayer {
     team:            string;
 }
 
-export interface ItemData {
+export interface ActiveItemData {
     canUse:         boolean;
     consumable:     boolean;
     count:          number;

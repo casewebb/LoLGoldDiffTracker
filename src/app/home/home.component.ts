@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { ItemData, Datum } from '../interfaces/LeagueInterfaces';
+import { Datum } from '../interfaces/LeagueInterfaces';
 import { LeagueApiServiceService } from '../services/league-api-service.service'
 
 @Component({
