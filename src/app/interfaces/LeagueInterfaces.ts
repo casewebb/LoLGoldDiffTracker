@@ -7,7 +7,7 @@
  //Game Related Interfaces Below
 export interface Game {
     activePlayer: ActivePlayer;
-    allPlayers:   AllPlayer[];
+    allPlayers:   Player[];
     events:       Events;
     gameData:     GameData;
 }
@@ -88,7 +88,7 @@ export interface StatRune {
     rawDescription: string;
 }
 
-export interface AllPlayer {
+export interface Player {
     championName:    string;
     isBot:           boolean;
     isDead:          boolean;

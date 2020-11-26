@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { Datum } from '../interfaces/LeagueInterfaces';
+import { Datum, Game } from '../interfaces/LeagueInterfaces';
 import { LeagueApiServiceService } from '../services/league-api-service.service'
 
 @Component({
@@ -15,9 +15,12 @@ export class HomeComponent implements OnInit {
   currentLeagueVersion: string;
   currentGold: number;
   allItems: Array<Datum>;
+  currentGameData: Game;
 
   searchItem = new FormControl('');
+  searchChamp = new FormControl('');
   searchItemCost: string;
+  champTotalGold: string;
 
   async ngOnInit() {
     await this.leagueService.getLatestGameVersion().toPromise().then(versions => {
@@ -28,6 +31,7 @@ export class HomeComponent implements OnInit {
     //Will be switched to grab LIVE data during the game.
     this.leagueService.getTestGameData().subscribe(data => {
       this.currentGold = data.activePlayer.currentGold;
+      this.currentGameData = data;
     })
 
     //Retrieve all of the latest Item info for the latest league patch and add to global array
@@ -43,8 +47,27 @@ export class HomeComponent implements OnInit {
   }
 
   //Searching method for example on how to access specific item data
-  search() {
-    this.searchItemCost = this.allItems.filter(item => item.name == this.searchItem.value)[0].gold.total.toString()
+  setItemVal() {
+    this.searchItemCost = this.allItems.filter(item => item.name == this.searchItem.value)[0].gold.total.toString();
+  }
+
+  setChampGoldVal() {
+    this.champTotalGold = this.getChampionsTotalGold(this.searchChamp.value).toString();
+  }
+
+  getItemCost(itemName: string) {
+    return this.allItems.filter(item => item.name == itemName)[0].gold.total;
+  }
+
+  getChampionsTotalGold(champName: string) {
+    let totalGold = 0;
+    let champItems = this.currentGameData.allPlayers.filter(player => player.championName == champName)[0].items;
+    
+    for (var item of champItems) {
+      totalGold += this.getItemCost(item.displayName);
+    }
+
+    return totalGold;
   }
 
 }

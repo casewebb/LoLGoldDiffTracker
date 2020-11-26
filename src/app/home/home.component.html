@@ -5,8 +5,20 @@
     <form>
         <label for="searchItem">Search Item: </label>
         <input id="searchItem" [formControl]="searchItem">
+        <button (click)="setItemVal()">Search</button>
     </form>
 </div>
 <button (click)="search()">Search</button>
 
 <div>Item Cost: {{searchItemCost}}</div>
+
+
+<div>
+    <form>
+        <label for="searchChamp">Search Champions Current Total Gold (Test data has Vayne, Nasus, Karthus): </label>
+        <input id="searchChamp" [formControl]="searchChamp">
+        <button (click)="setChampGoldVal()">Search</button>
+    </form>
+</div>
+
+<div>Item Cost: {{champTotalGold}}</div>
