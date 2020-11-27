@@ -22,6 +22,7 @@ export class HomeComponent implements OnInit {
   private OFFLINE = true;
 
   allChampions: Array<Champion>;
+  apiWorking = false;
 
   currentLeagueVersion: string;
   allItems: Array<Datum>;
@@ -53,8 +54,10 @@ export class HomeComponent implements OnInit {
     interval(this.REFRESH_TIME).subscribe((val) => {
       try {
         this.buildAllChamps();
+        this.apiWorking = true;
       } catch (err) {
-        console.log("Invalid Champion Name")
+        console.log("Unable to load data")
+        this.apiWorking = false;
       }
     })
   }

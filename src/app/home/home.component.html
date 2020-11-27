@@ -26,4 +26,8 @@
 <h1>
     <div>Champions List</div>
 </h1>
-<app-champion-card *ngFor="let champion of allChampions" [champion]="champion"></app-champion-card>
+<div *ngIf="apiWorking">
+    <app-champion-card *ngFor="let champion of allChampions" [champion]="champion"></app-champion-card>
+</div>
+
+<div *ngIf="!apiWorking"> Waiting on connection to League Client...</div>
