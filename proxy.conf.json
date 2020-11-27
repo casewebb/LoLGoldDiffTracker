@@ -1,0 +1,7 @@
+{
+    "/liveclientdata/*": {
+        "target": "https://localhost:2999",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}
