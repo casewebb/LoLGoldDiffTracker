@@ -1,8 +1,6 @@
 <h1>
     <div>League Version {{currentLeagueVersion}}</div>
-    <div>Gold Testing Val {{currentGold}}</div>
 </h1>
-
 
 <h2>
     <div>
@@ -25,19 +23,7 @@
 
 </h2>
 
-
-<div>
-    <form>
-        <label for="searchChamp">Search Champions Current Total Gold (Test data has Vayne, Nasus, Karthus): </label>
-        <input id="searchChamp" [formControl]="searchChamp">
-        <button (click)="setChampGoldVal()">Search</button>
-    </form>
-</div>
-
-<div>Item Cost: {{champTotalGold}}</div>
-<img src="{{champImageUrl}}">
-<div>Items: </div>
-
-<img *ngFor="let image of itemImageArr" src="{{image}}">
-
-<app-champion-card></app-champion-card>
+<h1>
+    <div>Champions List</div>
+</h1>
+<app-champion-card *ngFor="let champion of allChampions" [champion]="champion"></app-champion-card>

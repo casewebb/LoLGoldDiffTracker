@@ -1,4 +1,4 @@
-export interface Champion {
+export class Champion {
     champImageUrl: string;
     totalGoldVal: string;
     team: string;
