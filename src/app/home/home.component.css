@@ -67,6 +67,39 @@ h1 {
   float: left;
 }
 
+.gold-diff-divider {
+  background-color: #000000;
+  border: 2px solid rgb(75, 75, 75);
+  min-width: 102px;
+  max-width: 102px;
+  padding-right: 1px;
+  padding-left: 1px;
+  position: relative;
+  float: left;
+}
+
+.gold-diff-text {
+  color: rgb(6, 221, 24);
+  font-family: "Lucida Console", Courier, monospace;
+  font-size: 25px;
+  padding-top: 50px;
+}
+
+.losing {
+  color: rgb(255, 0, 0);
+  font-family: "Lucida Console", Courier, monospace;
+  font-size: 25px;
+  padding-top: 50px;
+}
+
+.cell {
+  min-width: 102px;
+  max-width: 102px;
+  height: 102px;
+  text-align: center;
+  border: 2px solid rgb(75, 75, 75);
+}
+
 .champ-container {
   display: flex;
   justify-content: center;

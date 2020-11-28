@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
 
   //FOR REAL GAME VS TESTING JSON
   //IF IN A REAL GAME SET TO true
-  private ONLINE = false;
+  private ONLINE = true;
 
   private alertItems = ["Perfectly Timed Stopwatch", "Commencing Stopwatch", "Stopwatch", "Zhonya's Hourglass", "Trinity Force"]
   private supportItemEvolved = ["Frostfang", "Runesteel Spaulders", "Targon's Buckler", "Harrowing Crescent"]
@@ -29,6 +29,7 @@ export class HomeComponent implements OnInit {
 
   redTeamChamps: Array<Champion>;
   blueTeamChamps: Array<Champion>;
+  goldDiffArr: number[];
   apiWorking = false;
 
   currentLeagueVersion: string;
@@ -130,7 +131,7 @@ export class HomeComponent implements OnInit {
         this.setTeamData(this.redTeamChamps, player);
       }
     }
-
+    this.getGoldDifferencePerLane();
   }
 
   //Reference full item list to find the price of an Item
@@ -168,6 +169,18 @@ export class HomeComponent implements OnInit {
 
     list[index].itemImageUrlArr = itemImgArray;
     list[index].totalGoldVal = totalGold.toString();
+  }
+
+  getGoldDifferencePerLane() {
+    var myTeamArr = this.activePlayer.team == "ORDER" ? this.blueTeamChamps : this.redTeamChamps;
+    var enemyTeamArr = this.activePlayer.team != "ORDER" ? this.blueTeamChamps : this.redTeamChamps;
+    this.goldDiffArr = [];
+    for (var champ of myTeamArr) {
+
+      var index = myTeamArr.indexOf(champ);
+      this.goldDiffArr[index] = +champ.totalGoldVal - +enemyTeamArr[index].totalGoldVal;
+    }
+    console.log(this.goldDiffArr);
   }
 
 }
