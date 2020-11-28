@@ -18,7 +18,7 @@ export class LeagueApiServiceService {
   constructor(private http: HttpClient) { }
   getGameData(): Observable<Game> {
     return this.http.get<Game>(inGameUrl)
-      .pipe(catchError(this.errorHandler));
+      .pipe(catchError(this.errorHandler));;
   }
 
   getTestGameData(): Observable<Game> {

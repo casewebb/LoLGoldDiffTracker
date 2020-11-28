@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
-import { interval } from 'rxjs';
+import { interval, throwError } from 'rxjs';
 import { Champion } from '../interfaces/Champion';
 import { Datum, Game, Player } from '../interfaces/LeagueInterfaces';
 import { LeagueApiServiceService } from '../services/league-api-service.service'
@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
 
   //FOR REAL GAME VS TESTING JSON
   //IF IN A REAL GAME SET TO true
-  private ONLINE = false;
+  private ONLINE = true;
 
   private alertItems = ["Perfectly Timed Stopwatch", "Commencing Stopwatch", "Stopwatch", "Zhonya's Hourglass", "Trinity Force"]
   private supportItemEvolved = ["Frostfang", "Runesteel Spaulders", "Targon's Buckler", "Harrowing Crescent"]
@@ -62,10 +62,8 @@ export class HomeComponent implements OnInit {
     interval(this.REFRESH_TIME).subscribe((val) => {
       try {
         this.buildAllChamps();
-        this.apiWorking = true;
       } catch (err) {
-        console.log("Unable to load data")
-        this.apiWorking = false;
+        console.log('Unable connect to League Client');
       }
     })
   }
@@ -86,8 +84,15 @@ export class HomeComponent implements OnInit {
         this.currentGameData = data;
       })
     } else {
-      this.leagueService.getGameData().subscribe(data => {
+      this.leagueService.getGameData().subscribe((data) => {
         this.currentGameData = data;
+        this.apiWorking = true;
+      }, (error) => {
+        this.apiWorking = false;
+        this.redTeamChamps = null;
+        this.blueTeamChamps = null;
+        this.currentGameData = null;
+        return;
       })
     }
 
@@ -102,7 +107,7 @@ export class HomeComponent implements OnInit {
         if (player.summonerName == this.currentGameData.activePlayer.summonerName) {
           champion.isActivePlayer = true;
         }
-        
+
         if (player.team == "ORDER") {
           champion.team = "ORDER";
           if (champion.isActivePlayer)
@@ -142,17 +147,17 @@ export class HomeComponent implements OnInit {
     let itemImgArray = new Array<string>();
 
     for (var item of player.items) {
-      if (this.alertItems.includes(item.displayName) 
-      && !this.alertsSent.includes(player.championName + "_" + item.displayName) 
-      && player.summonerName != this.currentGameData.activePlayer.summonerName
-      && player.team != this.activePlayer.team) {
+      if (this.alertItems.includes(item.displayName)
+        && !this.alertsSent.includes(player.championName + "_" + item.displayName)
+        && player.summonerName != this.currentGameData.activePlayer.summonerName
+        && player.team != this.activePlayer.team) {
         this.notifyService.warning(player.championName + ' purchased ' + item.displayName + ".");
         this.alertsSent.push(player.championName + "_" + item.displayName);
       }
 
-      if (this.supportItemEvolved.includes(item.displayName) 
-      && !this.alertsSent.includes(player.championName + "_" + item.displayName)
-      && player.team == this.activePlayer.team) {
+      if (this.supportItemEvolved.includes(item.displayName)
+        && !this.alertsSent.includes(player.championName + "_" + item.displayName)
+        && player.team == this.activePlayer.team) {
         this.notifyService.info(player.championName + ' upgraded their support item. Consider switching trinkets.');
         this.alertsSent.push(player.championName + "_" + item.displayName);
       }

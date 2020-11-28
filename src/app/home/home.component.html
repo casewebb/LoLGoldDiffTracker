@@ -26,10 +26,10 @@
         </div>
     </div>
 
-    <div cdkDropList class="champ-list" *ngIf="apiWorking" (cdkDropListDropped)="drop($event, redTeamChamps)">
+    <div cdkDropList class="champ-list" [hidden]="!apiWorking" (cdkDropListDropped)="drop($event, redTeamChamps)">
         <div cdkDrag *ngFor="let champion of redTeamChamps">
             <app-champion-card [champion]="champion"></app-champion-card>
         </div>
     </div>
-    <h2 class="warn" *ngIf="!apiWorking"> Waiting on connection to League Client...</h2>
+    <h2 class="warn" [hidden]="apiWorking"> Waiting on connection to League Client...</h2>
 </div>

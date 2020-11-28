@@ -30,7 +30,7 @@ import { ToastrModule } from 'ngx-toastr';
       closeButton: true,
       tapToDismiss: true,
       extendedTimeOut: 0,
-      timeOut: 0,
+      timeOut: 30000,
     }),
   ],
   providers: [],
