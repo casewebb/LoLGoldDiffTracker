@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
 
   //FOR REAL GAME VS TESTING JSON
   //IF IN A REAL GAME SET TO true
-  private ONLINE = true;
+  private ONLINE = false;
 
   private alertItems = ["Perfectly Timed Stopwatch", "Commencing Stopwatch", "Stopwatch", "Zhonya's Hourglass", "Trinity Force"]
   private supportItemEvolved = ["Frostfang", "Runesteel Spaulders", "Targon's Buckler", "Harrowing Crescent"]
@@ -176,11 +176,12 @@ export class HomeComponent implements OnInit {
     var enemyTeamArr = this.activePlayer.team != "ORDER" ? this.blueTeamChamps : this.redTeamChamps;
     this.goldDiffArr = [];
     for (var champ of myTeamArr) {
-
       var index = myTeamArr.indexOf(champ);
       this.goldDiffArr[index] = +champ.totalGoldVal - +enemyTeamArr[index].totalGoldVal;
     }
-    console.log(this.goldDiffArr);
+    this.goldDiffArr.push(this.goldDiffArr.reduce(function(a,b) {
+        return a + b;
+    }, 0));
   }
 
 }
