@@ -1,8 +1,8 @@
-<div class="champ-card">
+<div [ngClass]="{'champ-card': true, red: champion.team == 'RED', blue: champion.team == 'BLUE'}">
     <div>
         <i class="coin-icon"></i>
         <span class="coin-val">{{champion.totalGoldVal}}</span>
     </div>
-    <img class="champ-img" src="{{champion.champImageUrl}}">
+    <img [ngClass]="{'active-player': champion.isActivePlayer}" class="champ-img" src="{{champion.champImageUrl}}">
     <img class="item-img" *ngFor="let image of champion.itemImageUrlArr" src="{{image}}">
 </div>

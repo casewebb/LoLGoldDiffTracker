@@ -60,3 +60,14 @@ h1 {
   background-color: #008CBA;
   color: white;
 }
+
+.champ-list {
+  padding-right: 1px;
+  position: relative;
+  float: left;
+}
+
+.champ-container {
+  display: flex;
+  justify-content: center;
+}

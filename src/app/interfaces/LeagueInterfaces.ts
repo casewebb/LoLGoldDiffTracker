@@ -270,6 +270,14 @@ export enum Type {
     Item = "item",
 }
 
+export enum Role {
+    TOP = 1,
+    JUNGLE = 2,
+    MIDDLE = 3,
+    BOTTOM = 4,
+    SUPPORT = 5
+}
+
 export interface Group {
     id:              string;
     MaxGroupOwnable: string;

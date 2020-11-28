@@ -21,7 +21,8 @@ export class HomeComponent implements OnInit {
   //IF IN A REAL GAME SET TO FALSE
   private OFFLINE = true;
 
-  allChampions: Array<Champion>;
+  redTeamChamps: Array<Champion>;
+  blueTeamChamps: Array<Champion>;
   apiWorking = false;
 
   currentLeagueVersion: string;
@@ -83,9 +84,13 @@ export class HomeComponent implements OnInit {
       })
     }
 
-    this.allChampions = new Array<Champion>();
+    this.redTeamChamps = new Array<Champion>();
+    this.blueTeamChamps = new Array<Champion>();
     for (var player of this.currentGameData.allPlayers) {
       var champion = new Champion();
+      if (player.summonerName == this.currentGameData.activePlayer.summonerName) {
+        champion.isActivePlayer = true;
+      }
       champion.champImageUrl = `http://ddragon.leagueoflegends.com/cdn/${this.currentLeagueVersion}/img/champion/${player.rawChampionName.replace('game_character_displayname_', '')}.png`;
 
       let totalGold = 0;
@@ -98,8 +103,16 @@ export class HomeComponent implements OnInit {
 
       champion.itemImageUrlArr = itemImgArray;
       champion.totalGoldVal = totalGold.toString();
+      champion.role = player.position;
 
-      this.allChampions.push(champion);
+      if (player.team == "ORDER") {
+        champion.team = "BLUE";
+        this.blueTeamChamps.push(champion);
+      } else {
+        console.log("Added Red")
+        champion.team = "RED";
+        this.redTeamChamps.push(champion);
+      }
     }
   }
 

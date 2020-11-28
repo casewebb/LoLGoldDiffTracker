@@ -1,702 +1,1820 @@
 {
-	"activePlayer": {
-		"abilities": {
-			"E": {
-				"abilityLevel": 3,
-				"displayName": "Condemn",
-				"id": "VayneCondemn",
-				"rawDescription": "GeneratedTip_Spell_VayneCondemn_Description",
-				"rawDisplayName": "GeneratedTip_Spell_VayneCondemn_DisplayName"
-			},
-			"Passive": {
-				"displayName": "Night Hunter",
-				"id": "VaynePassive",
-				"rawDescription": "GeneratedTip_Passive_VaynePassive_Description",
-				"rawDisplayName": "GeneratedTip_Passive_VaynePassive_DisplayName"
-			},
-			"Q": {
-				"abilityLevel": 5,
-				"displayName": "Tumble",
-				"id": "VayneTumble",
-				"rawDescription": "GeneratedTip_Spell_VayneTumble_Description",
-				"rawDisplayName": "GeneratedTip_Spell_VayneTumble_DisplayName"
-			},
-			"R": {
-				"abilityLevel": 3,
-				"displayName": "Final Hour",
-				"id": "VayneInquisition",
-				"rawDescription": "GeneratedTip_Spell_VayneInquisition_Description",
-				"rawDisplayName": "GeneratedTip_Spell_VayneInquisition_DisplayName"
-			},
-			"W": {
-				"abilityLevel": 5,
-				"displayName": "Silver Bolts",
-				"id": "VayneSilveredBolts",
-				"rawDescription": "GeneratedTip_Spell_VayneSilveredBolts_Description",
-				"rawDisplayName": "GeneratedTip_Spell_VayneSilveredBolts_DisplayName"
-			}
-		},
-		"championStats": {
-			"abilityPower": 0.0,
-			"armor": 72.21501159667969,
-			"armorPenetrationFlat": 0.0,
-			"armorPenetrationPercent": 1.0,
-			"attackDamage": 185.05511474609376,
-			"attackRange": 550.0,
-			"attackSpeed": 1.5184502601623536,
-			"bonusArmorPenetrationPercent": 1.0,
-			"bonusMagicPenetrationPercent": 1.0,
-			"cooldownReduction": 0.0,
-			"critChance": 0.550000011920929,
-			"critDamage": 175.0,
-			"currentHealth": 1934.45166015625,
-			"healthRegenRate": 2.292250156402588,
-			"lifeSteal": 0.11999999731779099,
-			"magicLethality": 0.0,
-			"magicPenetrationFlat": 0.0,
-			"magicPenetrationPercent": 1.0,
-			"magicResist": 67.23750305175781,
-			"maxHealth": 1934.45166015625,
-			"moveSpeed": 353.1000061035156,
-			"physicalLethality": 0.0,
-			"resourceMax": 738.425048828125,
-			"resourceRegenRate": 2.5524001121520998,
-			"resourceType": "MANA",
-			"resourceValue": 626.0628051757813,
-			"spellVamp": 0.0,
-			"tenacity": 0.0
-		},
-		"currentGold": 1031.233154296875,
-		"fullRunes": {
-			"generalRunes": [
-				{
-					"displayName": "Press the Attack",
-					"id": 8005,
-					"rawDescription": "perk_tooltip_PressTheAttack",
-					"rawDisplayName": "perk_displayname_PressTheAttack"
-				},
-				{
-					"displayName": "Triumph",
-					"id": 9111,
-					"rawDescription": "perk_tooltip_9111",
-					"rawDisplayName": "perk_displayname_9111"
-				},
-				{
-					"displayName": "Legend: Alacrity",
-					"id": 9104,
-					"rawDescription": "perk_tooltip_9104",
-					"rawDisplayName": "perk_displayname_9104"
-				},
-				{
-					"displayName": "Coup de Grace",
-					"id": 8014,
-					"rawDescription": "perk_tooltip_CoupDeGrace",
-					"rawDisplayName": "perk_displayname_CoupDeGrace"
-				},
-				{
-					"displayName": "Absolute Focus",
-					"id": 8233,
-					"rawDescription": "perk_tooltip_8233",
-					"rawDisplayName": "perk_displayname_8233"
-				},
-				{
-					"displayName": "Gathering Storm",
-					"id": 8236,
-					"rawDescription": "perk_tooltip_GatheringStorm",
-					"rawDisplayName": "perk_displayname_GatheringStorm"
-				}
-			],
-			"keystone": {
-				"displayName": "Press the Attack",
-				"id": 8005,
-				"rawDescription": "perk_tooltip_PressTheAttack",
-				"rawDisplayName": "perk_displayname_PressTheAttack"
-			},
-			"primaryRuneTree": {
-				"displayName": "Precision",
-				"id": 8000,
-				"rawDescription": "perkstyle_tooltip_7201",
-				"rawDisplayName": "perkstyle_displayname_7201"
-			},
-			"secondaryRuneTree": {
-				"displayName": "Sorcery",
-				"id": 8200,
-				"rawDescription": "perkstyle_tooltip_7202",
-				"rawDisplayName": "perkstyle_displayname_7202"
-			},
-			"statRunes": [
-				{
-					"id": 5005,
-					"rawDescription": "perk_tooltip_StatModAttackSpeed"
-				},
-				{
-					"id": 5008,
-					"rawDescription": "perk_tooltip_StatModAdaptive"
-				},
-				{
-					"id": 5001,
-					"rawDescription": "perk_tooltip_StatModHealthScaling"
-				}
-			]
-		},
-		"level": 16,
-		"summonerName": "Worst Yasuo Iraq"
-	},
-	"allPlayers": [
-		{
-			"championName": "Vayne",
-			"isBot": false,
-			"isDead": false,
-			"items": [
-				{
-					"canUse": false,
-					"consumable": false,
-					"count": 1,
-					"displayName": "Immortal Shieldbow",
-					"itemID": 6673,
-					"price": 600,
-					"rawDescription": "GeneratedTip_Item_6673_Description",
-					"rawDisplayName": "Item_6673_Name",
-					"slot": 0
-				},
-				{
-					"canUse": false,
-					"consumable": false,
-					"count": 1,
-					"displayName": "Phantom Dancer",
-					"itemID": 3046,
-					"price": 1100,
-					"rawDescription": "GeneratedTip_Item_3046_Description",
-					"rawDisplayName": "Item_3046_Name",
-					"slot": 1
-				},
-				{
-					"canUse": true,
-					"consumable": false,
-					"count": 1,
-					"displayName": "Quicksilver Sash",
-					"itemID": 3140,
-					"price": 850,
-					"rawDescription": "GeneratedTip_Item_3140_Description",
-					"rawDisplayName": "Item_3140_Name",
-					"slot": 2
-				},
-				{
-					"canUse": false,
-					"consumable": false,
-					"count": 1,
-					"displayName": "Cloak of Agility",
-					"itemID": 1018,
-					"price": 600,
-					"rawDescription": "GeneratedTip_Item_1018_Description",
-					"rawDisplayName": "Item_1018_Name",
-					"slot": 3
-				},
-				{
-					"canUse": true,
-					"consumable": false,
-					"count": 1,
-					"displayName": "Stealth Ward",
-					"itemID": 3340,
-					"price": 0,
-					"rawDescription": "GeneratedTip_Item_3340_Description",
-					"rawDisplayName": "Item_3340_Name",
-					"slot": 6
-				}
-			],
-			"level": 16,
-			"position": "",
-			"rawChampionName": "game_character_displayname_Vayne",
-			"respawnTimer": 0.0,
-			"runes": {
-				"keystone": {
-					"displayName": "Press the Attack",
-					"id": 8005,
-					"rawDescription": "perk_tooltip_PressTheAttack",
-					"rawDisplayName": "perk_displayname_PressTheAttack"
-				},
-				"primaryRuneTree": {
-					"displayName": "Precision",
-					"id": 8000,
-					"rawDescription": "perkstyle_tooltip_7201",
-					"rawDisplayName": "perkstyle_displayname_7201"
-				},
-				"secondaryRuneTree": {
-					"displayName": "Sorcery",
-					"id": 8200,
-					"rawDescription": "perkstyle_tooltip_7202",
-					"rawDisplayName": "perkstyle_displayname_7202"
-				}
-			},
-			"scores": {
-				"assists": 0,
-				"creepScore": 100,
-				"deaths": 0,
-				"kills": 12,
-				"wardScore": 1.125
-			},
-			"skinID": 0,
-			"summonerName": "Worst Yasuo Iraq",
-			"summonerSpells": {
-				"summonerSpellOne": {
-					"displayName": "Heal",
-					"rawDescription": "GeneratedTip_SummonerSpell_SummonerHeal_Description",
-					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerHeal_DisplayName"
-				},
-				"summonerSpellTwo": {
-					"displayName": "Flash",
-					"rawDescription": "GeneratedTip_SummonerSpell_SummonerFlash_Description",
-					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerFlash_DisplayName"
-				}
-			},
-			"team": "ORDER"
-		},
-		{
-			"championName": "Nasus",
-			"isBot": true,
-			"isDead": false,
-			"items": [
-				{
-					"canUse": false,
-					"consumable": false,
-					"count": 1,
-					"displayName": "Doran's Blade",
-					"itemID": 1055,
-					"price": 450,
-					"rawDescription": "GeneratedTip_Item_1055_Description",
-					"rawDisplayName": "Item_1055_Name",
-					"slot": 0
-				},
-				{
-					"canUse": false,
-					"consumable": false,
-					"count": 1,
-					"displayName": "Boots",
-					"itemID": 1001,
-					"price": 300,
-					"rawDescription": "GeneratedTip_Item_1001_Description",
-					"rawDisplayName": "Item_1001_Name",
-					"slot": 1
-				},
-				{
-					"canUse": false,
-					"consumable": false,
-					"count": 1,
-					"displayName": "Trinity Force",
-					"itemID": 3078,
-					"price": 733,
-					"rawDescription": "GeneratedTip_Item_3078_Description",
-					"rawDisplayName": "Item_3078_Name",
-					"slot": 2
-				},
-				{
-					"canUse": false,
-					"consumable": false,
-					"count": 1,
-					"displayName": "Pickaxe",
-					"itemID": 1037,
-					"price": 875,
-					"rawDescription": "GeneratedTip_Item_1037_Description",
-					"rawDisplayName": "Item_1037_Name",
-					"slot": 3
-				},
-				{
-					"canUse": false,
-					"consumable": false,
-					"count": 1,
-					"displayName": "Phage",
-					"itemID": 3044,
-					"price": 350,
-					"rawDescription": "GeneratedTip_Item_3044_Description",
-					"rawDisplayName": "Item_3044_Name",
-					"slot": 4
-				},
-				{
-					"canUse": false,
-					"consumable": false,
-					"count": 1,
-					"displayName": "Ruby Crystal",
-					"itemID": 1028,
-					"price": 400,
-					"rawDescription": "GeneratedTip_Item_1028_Description",
-					"rawDisplayName": "Item_1028_Name",
-					"slot": 5
-				},
-				{
-					"canUse": true,
-					"consumable": false,
-					"count": 1,
-					"displayName": "Stealth Ward",
-					"itemID": 3340,
-					"price": 0,
-					"rawDescription": "GeneratedTip_Item_3340_Description",
-					"rawDisplayName": "Item_3340_Name",
-					"slot": 6
-				}
-			],
-			"level": 13,
-			"position": "",
-			"rawChampionName": "game_character_displayname_Nasus",
-			"respawnTimer": 0.0,
-			"runes": {
-				"keystone": {
-					"displayName": "Grasp of the Undying",
-					"id": 8437,
-					"rawDescription": "perk_tooltip_GraspOfTheUndying",
-					"rawDisplayName": "perk_displayname_GraspOfTheUndying"
-				},
-				"primaryRuneTree": {
-					"displayName": "Resolve",
-					"id": 8400,
-					"rawDescription": "perkstyle_tooltip_7204",
-					"rawDisplayName": "perkstyle_displayname_7204"
-				},
-				"secondaryRuneTree": {
-					"displayName": "Sorcery",
-					"id": 8200,
-					"rawDescription": "perkstyle_tooltip_7202",
-					"rawDisplayName": "perkstyle_displayname_7202"
-				}
-			},
-			"scores": {
-				"assists": 0,
-				"creepScore": 110,
-				"deaths": 7,
-				"kills": 0,
-				"wardScore": 0.0
-			},
-			"skinID": 0,
-			"summonerName": "Nasus Bot",
-			"summonerSpells": {
-				"summonerSpellOne": {
-					"displayName": "Teleport",
-					"rawDescription": "GeneratedTip_SummonerSpell_SummonerTeleport_Description",
-					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerTeleport_DisplayName"
-				},
-				"summonerSpellTwo": {
-					"displayName": "Ghost",
-					"rawDescription": "GeneratedTip_SummonerSpell_SummonerHaste_Description",
-					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerHaste_DisplayName"
-				}
-			},
-			"team": "CHAOS"
-		},
-		{
-			"championName": "Karthus",
-			"isBot": true,
-			"isDead": false,
-			"items": [
-				{
-					"canUse": false,
-					"consumable": false,
-					"count": 1,
-					"displayName": "Doran's Ring",
-					"itemID": 1056,
-					"price": 400,
-					"rawDescription": "GeneratedTip_Item_1056_Description",
-					"rawDisplayName": "Item_1056_Name",
-					"slot": 0
-				},
-				{
-					"canUse": false,
-					"consumable": false,
-					"count": 1,
-					"displayName": "Sorcerer's Shoes",
-					"itemID": 3020,
-					"price": 800,
-					"rawDescription": "GeneratedTip_Item_3020_Description",
-					"rawDisplayName": "Item_3020_Name",
-					"slot": 1
-				},
-				{
-					"canUse": false,
-					"consumable": false,
-					"count": 1,
-					"displayName": "Luden's Tempest",
-					"itemID": 6655,
-					"price": 1250,
-					"rawDescription": "GeneratedTip_Item_6655_Description",
-					"rawDisplayName": "Item_6655_Name",
-					"slot": 2
-				},
-				{
-					"canUse": false,
-					"consumable": false,
-					"count": 1,
-					"displayName": "Giant's Belt",
-					"itemID": 1011,
-					"price": 500,
-					"rawDescription": "GeneratedTip_Item_1011_Description",
-					"rawDisplayName": "Item_1011_Name",
-					"slot": 3
-				},
-				{
-					"canUse": true,
-					"consumable": false,
-					"count": 1,
-					"displayName": "Stealth Ward",
-					"itemID": 3340,
-					"price": 0,
-					"rawDescription": "GeneratedTip_Item_3340_Description",
-					"rawDisplayName": "Item_3340_Name",
-					"slot": 6
-				}
-			],
-			"level": 14,
-			"position": "",
-			"rawChampionName": "game_character_displayname_Karthus",
-			"respawnTimer": 0.0,
-			"runes": {
-				"keystone": {
-					"displayName": "Arcane Comet",
-					"id": 8229,
-					"rawDescription": "perk_tooltip_ArcaneComet",
-					"rawDisplayName": "perk_displayname_ArcaneComet"
-				},
-				"primaryRuneTree": {
-					"displayName": "Sorcery",
-					"id": 8200,
-					"rawDescription": "perkstyle_tooltip_7202",
-					"rawDisplayName": "perkstyle_displayname_7202"
-				},
-				"secondaryRuneTree": {
-					"displayName": "Domination",
-					"id": 8100,
-					"rawDescription": "perkstyle_tooltip_7200",
-					"rawDisplayName": "perkstyle_displayname_7200"
-				}
-			},
-			"scores": {
-				"assists": 0,
-				"creepScore": 90,
-				"deaths": 5,
-				"kills": 0,
-				"wardScore": 0.0
-			},
-			"skinID": 0,
-			"summonerName": "Karthus Bot",
-			"summonerSpells": {
-				"summonerSpellOne": {
-					"displayName": "Ignite",
-					"rawDescription": "GeneratedTip_SummonerSpell_SummonerDot_Description",
-					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerDot_DisplayName"
-				},
-				"summonerSpellTwo": {
-					"displayName": "Exhaust",
-					"rawDescription": "GeneratedTip_SummonerSpell_SummonerExhaust_Description",
-					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerExhaust_DisplayName"
-				}
-			},
-			"team": "CHAOS"
-		}
-	],
-	"events": {
-		"Events": [
-			{
-				"EventID": 0,
-				"EventName": "GameStart",
-				"EventTime": 0.022052200511097909
-			},
-			{
-				"EventID": 1,
-				"EventName": "MinionsSpawning",
-				"EventTime": 65.0511245727539
-			},
-			{
-				"Assisters": [],
-				"EventID": 2,
-				"EventName": "ChampionKill",
-				"EventTime": 565.7686767578125,
-				"KillerName": "Worst Yasuo Iraq",
-				"VictimName": "Nasus Bot"
-			},
-			{
-				"EventID": 3,
-				"EventName": "FirstBlood",
-				"EventTime": 565.7686767578125,
-				"Recipient": "Worst Yasuo Iraq"
-			},
-			{
-				"Assisters": [],
-				"EventID": 4,
-				"EventName": "ChampionKill",
-				"EventTime": 651.4456787109375,
-				"KillerName": "Worst Yasuo Iraq",
-				"VictimName": "Nasus Bot"
-			},
-			{
-				"Assisters": [],
-				"EventID": 5,
-				"EventName": "ChampionKill",
-				"EventTime": 720.0521240234375,
-				"KillerName": "Worst Yasuo Iraq",
-				"VictimName": "Karthus Bot"
-			},
-			{
-				"Assisters": [],
-				"EventID": 6,
-				"EventName": "TurretKilled",
-				"EventTime": 744.3460693359375,
-				"KillerName": "Nasus Bot",
-				"TurretKilled": "Turret_T1_R_03_A"
-			},
-			{
-				"EventID": 7,
-				"EventName": "FirstBrick",
-				"EventTime": 744.3460693359375,
-				"KillerName": "Nasus Bot"
-			},
-			{
-				"Assisters": [],
-				"EventID": 8,
-				"EventName": "ChampionKill",
-				"EventTime": 876.080078125,
-				"KillerName": "Worst Yasuo Iraq",
-				"VictimName": "Nasus Bot"
-			},
-			{
-				"Assisters": [],
-				"EventID": 9,
-				"EventName": "ChampionKill",
-				"EventTime": 950.2664184570313,
-				"KillerName": "Worst Yasuo Iraq",
-				"VictimName": "Nasus Bot"
-			},
-			{
-				"Assisters": [],
-				"EventID": 10,
-				"EventName": "TurretKilled",
-				"EventTime": 960.5581665039063,
-				"KillerName": "Minion_T200L2S29N0183",
-				"TurretKilled": "Turret_T1_L_03_A"
-			},
-			{
-				"Assisters": [],
-				"EventID": 11,
-				"EventName": "ChampionKill",
-				"EventTime": 1012.5672607421875,
-				"KillerName": "Worst Yasuo Iraq",
-				"VictimName": "Karthus Bot"
-			},
-			{
-				"Assisters": [],
-				"EventID": 12,
-				"EventName": "TurretKilled",
-				"EventTime": 1095.5748291015626,
-				"KillerName": "Nasus Bot",
-				"TurretKilled": "Turret_T1_R_02_A"
-			},
-			{
-				"Assisters": [],
-				"EventID": 13,
-				"EventName": "ChampionKill",
-				"EventTime": 1097.62109375,
-				"KillerName": "Worst Yasuo Iraq",
-				"VictimName": "Karthus Bot"
-			},
-			{
-				"Assisters": [],
-				"EventID": 14,
-				"EventName": "ChampionKill",
-				"EventTime": 1158.82373046875,
-				"KillerName": "Worst Yasuo Iraq",
-				"VictimName": "Nasus Bot"
-			},
-			{
-				"Assisters": [
-					"Nasus Bot"
-				],
-				"EventID": 15,
-				"EventName": "TurretKilled",
-				"EventTime": 1325.250732421875,
-				"KillerName": "Minion_T200L0S41N0260",
-				"TurretKilled": "Turret_T1_C_07_A"
-			},
-			{
-				"Assisters": [
-					"Karthus Bot"
-				],
-				"EventID": 16,
-				"EventName": "InhibKilled",
-				"EventTime": 1339.193115234375,
-				"InhibKilled": "Barracks_T1_R1",
-				"KillerName": "Nasus Bot"
-			},
-			{
-				"Assisters": [],
-				"EventID": 17,
-				"EventName": "ChampionKill",
-				"EventTime": 1366.8109130859376,
-				"KillerName": "Worst Yasuo Iraq",
-				"VictimName": "Nasus Bot"
-			},
-			{
-				"Assisters": [],
-				"EventID": 18,
-				"EventName": "ChampionKill",
-				"EventTime": 1371.7662353515626,
-				"KillerName": "Worst Yasuo Iraq",
-				"VictimName": "Karthus Bot"
-			},
-			{
-				"EventID": 19,
-				"EventName": "Multikill",
-				"EventTime": 1371.7662353515626,
-				"KillStreak": 2,
-				"KillerName": "Worst Yasuo Iraq"
-			},
-			{
-				"Acer": "Worst Yasuo Iraq",
-				"AcingTeam": "ORDER",
-				"EventID": 20,
-				"EventName": "Ace",
-				"EventTime": 1371.7662353515626
-			},
-			{
-				"Assisters": [],
-				"EventID": 21,
-				"EventName": "TurretKilled",
-				"EventTime": 1446.720947265625,
-				"KillerName": "Minion_T200L0S45N0276",
-				"TurretKilled": "Turret_T1_C_02_A"
-			},
-			{
-				"Assisters": [],
-				"EventID": 22,
-				"EventName": "ChampionKill",
-				"EventTime": 1480.0128173828126,
-				"KillerName": "Worst Yasuo Iraq",
-				"VictimName": "Nasus Bot"
-			},
-			{
-				"Assisters": [],
-				"EventID": 23,
-				"EventName": "ChampionKill",
-				"EventTime": 1488.1396484375,
-				"KillerName": "Worst Yasuo Iraq",
-				"VictimName": "Karthus Bot"
-			},
-			{
-				"EventID": 24,
-				"EventName": "Multikill",
-				"EventTime": 1488.1396484375,
-				"KillStreak": 2,
-				"KillerName": "Worst Yasuo Iraq"
-			},
-			{
-				"Acer": "Worst Yasuo Iraq",
-				"AcingTeam": "ORDER",
-				"EventID": 25,
-				"EventName": "Ace",
-				"EventTime": 1488.1396484375
-			}
-		]
-	},
-	"gameData": {
-		"gameMode": "CLASSIC",
-		"gameTime": 1540.4248046875,
-		"mapName": "Map11",
-		"mapNumber": 11,
-		"mapTerrain": "Default"
-	}
+    "activePlayer": {
+        "abilities": {
+            "E": {
+                "abilityLevel": 2,
+                "displayName": "Shadow Slash",
+                "id": "ZedE",
+                "rawDescription": "GeneratedTip_Spell_ZedE_Description",
+                "rawDisplayName": "GeneratedTip_Spell_ZedE_DisplayName"
+            },
+            "Passive": {
+                "displayName": "Contempt for the Weak",
+                "id": "ZedPassive",
+                "rawDescription": "GeneratedTip_Passive_ZedPassive_Description",
+                "rawDisplayName": "GeneratedTip_Passive_ZedPassive_DisplayName"
+            },
+            "Q": {
+                "abilityLevel": 5,
+                "displayName": "Razor Shuriken",
+                "id": "ZedQ",
+                "rawDescription": "GeneratedTip_Spell_ZedQ_Description",
+                "rawDisplayName": "GeneratedTip_Spell_ZedQ_DisplayName"
+            },
+            "R": {
+                "abilityLevel": 1,
+                "displayName": "Death Mark",
+                "id": "ZedR",
+                "rawDescription": "GeneratedTip_Spell_ZedR_Description",
+                "rawDisplayName": "GeneratedTip_Spell_ZedR_DisplayName"
+            },
+            "W": {
+                "abilityLevel": 1,
+                "displayName": "Living Shadow",
+                "id": "ZedW",
+                "rawDescription": "GeneratedTip_Spell_ZedW_Description",
+                "rawDisplayName": "GeneratedTip_Spell_ZedW_DisplayName"
+            }
+        },
+        "championStats": {
+            "abilityPower": 0.0,
+            "armor": 55.59000015258789,
+            "armorPenetrationFlat": 0.0,
+            "armorPenetrationPercent": 1.0,
+            "attackDamage": 192.1395263671875,
+            "attackRange": 125.0,
+            "attackSpeed": 0.9097203612327576,
+            "bonusArmorPenetrationPercent": 1.0,
+            "bonusMagicPenetrationPercent": 1.0,
+            "cooldownReduction": 0.0,
+            "critChance": 0.0,
+            "critDamage": 175.0,
+            "currentHealth": 1357.194091796875,
+            "healthRegenRate": 2.27620005607605,
+            "lifeSteal": 0.0,
+            "magicLethality": 0.0,
+            "magicPenetrationFlat": 0.0,
+            "magicPenetrationPercent": 1.0,
+            "magicResist": 65.52499389648438,
+            "maxHealth": 1357.194091796875,
+            "moveSpeed": 345.0,
+            "physicalLethality": 18.0,
+            "resourceMax": 200.0,
+            "resourceRegenRate": 10.0,
+            "resourceType": "ENERGY",
+            "resourceValue": 200.0,
+            "spellVamp": 0.0,
+            "tenacity": 0.0
+        },
+        "currentGold": 123.48729705810547,
+        "fullRunes": {
+            "generalRunes": [
+                {
+                    "displayName": "Press the Attack",
+                    "id": 8005,
+                    "rawDescription": "perk_tooltip_PressTheAttack",
+                    "rawDisplayName": "perk_displayname_PressTheAttack"
+                },
+                {
+                    "displayName": "Triumph",
+                    "id": 9111,
+                    "rawDescription": "perk_tooltip_9111",
+                    "rawDisplayName": "perk_displayname_9111"
+                },
+                {
+                    "displayName": "Legend: Alacrity",
+                    "id": 9104,
+                    "rawDescription": "perk_tooltip_9104",
+                    "rawDisplayName": "perk_displayname_9104"
+                },
+                {
+                    "displayName": "Coup de Grace",
+                    "id": 8014,
+                    "rawDescription": "perk_tooltip_CoupDeGrace",
+                    "rawDisplayName": "perk_displayname_CoupDeGrace"
+                },
+                {
+                    "displayName": "Absolute Focus",
+                    "id": 8233,
+                    "rawDescription": "perk_tooltip_8233",
+                    "rawDisplayName": "perk_displayname_8233"
+                },
+                {
+                    "displayName": "Gathering Storm",
+                    "id": 8236,
+                    "rawDescription": "perk_tooltip_GatheringStorm",
+                    "rawDisplayName": "perk_displayname_GatheringStorm"
+                }
+            ],
+            "keystone": {
+                "displayName": "Press the Attack",
+                "id": 8005,
+                "rawDescription": "perk_tooltip_PressTheAttack",
+                "rawDisplayName": "perk_displayname_PressTheAttack"
+            },
+            "primaryRuneTree": {
+                "displayName": "Precision",
+                "id": 8000,
+                "rawDescription": "perkstyle_tooltip_7201",
+                "rawDisplayName": "perkstyle_displayname_7201"
+            },
+            "secondaryRuneTree": {
+                "displayName": "Sorcery",
+                "id": 8200,
+                "rawDescription": "perkstyle_tooltip_7202",
+                "rawDisplayName": "perkstyle_displayname_7202"
+            },
+            "statRunes": [
+                {
+                    "id": 5005,
+                    "rawDescription": "perk_tooltip_StatModAttackSpeed"
+                },
+                {
+                    "id": 5008,
+                    "rawDescription": "perk_tooltip_StatModAdaptive"
+                },
+                {
+                    "id": 5001,
+                    "rawDescription": "perk_tooltip_StatModHealthScaling"
+                }
+            ]
+        },
+        "level": 9,
+        "summonerName": "Worst Yasuo Iraq"
+    },
+    "allPlayers": [
+        {
+            "championName": "Zed",
+            "isBot": false,
+            "isDead": false,
+            "items": [
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Cull",
+                    "itemID": 1083,
+                    "price": 450,
+                    "rawDescription": "GeneratedTip_Item_1083_Description",
+                    "rawDisplayName": "Item_1083_Name",
+                    "slot": 0
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Serpent's Fang",
+                    "itemID": 6695,
+                    "price": 825,
+                    "rawDescription": "GeneratedTip_Item_6695_Description",
+                    "rawDisplayName": "Item_6695_Name",
+                    "slot": 1
+                },
+                {
+                    "canUse": true,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Stopwatch",
+                    "itemID": 2420,
+                    "price": 650,
+                    "rawDescription": "GeneratedTip_Item_2420_Description",
+                    "rawDisplayName": "Item_2420_Name",
+                    "slot": 2
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Ruby Crystal",
+                    "itemID": 1028,
+                    "price": 400,
+                    "rawDescription": "GeneratedTip_Item_1028_Description",
+                    "rawDisplayName": "Item_1028_Name",
+                    "slot": 3
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Null-Magic Mantle",
+                    "itemID": 1033,
+                    "price": 450,
+                    "rawDescription": "GeneratedTip_Item_1033_Description",
+                    "rawDisplayName": "Item_1033_Name",
+                    "slot": 4
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Long Sword",
+                    "itemID": 1036,
+                    "price": 350,
+                    "rawDescription": "GeneratedTip_Item_1036_Description",
+                    "rawDisplayName": "Item_1036_Name",
+                    "slot": 5
+                },
+                {
+                    "canUse": true,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Stealth Ward",
+                    "itemID": 3340,
+                    "price": 0,
+                    "rawDescription": "GeneratedTip_Item_3340_Description",
+                    "rawDisplayName": "Item_3340_Name",
+                    "slot": 6
+                }
+            ],
+            "level": 9,
+            "position": "",
+            "rawChampionName": "game_character_displayname_Zed",
+            "respawnTimer": 0.0,
+            "runes": {
+                "keystone": {
+                    "displayName": "Press the Attack",
+                    "id": 8005,
+                    "rawDescription": "perk_tooltip_PressTheAttack",
+                    "rawDisplayName": "perk_displayname_PressTheAttack"
+                },
+                "primaryRuneTree": {
+                    "displayName": "Precision",
+                    "id": 8000,
+                    "rawDescription": "perkstyle_tooltip_7201",
+                    "rawDisplayName": "perkstyle_displayname_7201"
+                },
+                "secondaryRuneTree": {
+                    "displayName": "Sorcery",
+                    "id": 8200,
+                    "rawDescription": "perkstyle_tooltip_7202",
+                    "rawDisplayName": "perkstyle_displayname_7202"
+                }
+            },
+            "scores": {
+                "assists": 0,
+                "creepScore": 10,
+                "deaths": 0,
+                "kills": 3,
+                "wardScore": 0.0
+            },
+            "skinID": 0,
+            "summonerName": "Worst Yasuo Iraq",
+            "summonerSpells": {
+                "summonerSpellOne": {
+                    "displayName": "Heal",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerHeal_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerHeal_DisplayName"
+                },
+                "summonerSpellTwo": {
+                    "displayName": "Flash",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerFlash_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerFlash_DisplayName"
+                }
+            },
+            "team": "ORDER"
+        },
+        {
+            "championName": "Dr. Mundo",
+            "isBot": true,
+            "isDead": false,
+            "items": [
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Doran's Blade",
+                    "itemID": 1055,
+                    "price": 450,
+                    "rawDescription": "GeneratedTip_Item_1055_Description",
+                    "rawDisplayName": "Item_1055_Name",
+                    "slot": 0
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Boots",
+                    "itemID": 1001,
+                    "price": 300,
+                    "rawDescription": "GeneratedTip_Item_1001_Description",
+                    "rawDisplayName": "Item_1001_Name",
+                    "slot": 1
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Trinity Force",
+                    "itemID": 3078,
+                    "price": 733,
+                    "rawDescription": "GeneratedTip_Item_3078_Description",
+                    "rawDisplayName": "Item_3078_Name",
+                    "slot": 2
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Phage",
+                    "itemID": 3044,
+                    "price": 350,
+                    "rawDescription": "GeneratedTip_Item_3044_Description",
+                    "rawDisplayName": "Item_3044_Name",
+                    "slot": 3
+                },
+                {
+                    "canUse": true,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Stealth Ward",
+                    "itemID": 3340,
+                    "price": 0,
+                    "rawDescription": "GeneratedTip_Item_3340_Description",
+                    "rawDisplayName": "Item_3340_Name",
+                    "slot": 6
+                }
+            ],
+            "level": 12,
+            "position": "",
+            "rawChampionName": "game_character_displayname_DrMundo",
+            "respawnTimer": 0.0,
+            "runes": {
+                "keystone": {
+                    "displayName": "Grasp of the Undying",
+                    "id": 8437,
+                    "rawDescription": "perk_tooltip_GraspOfTheUndying",
+                    "rawDisplayName": "perk_displayname_GraspOfTheUndying"
+                },
+                "primaryRuneTree": {
+                    "displayName": "Resolve",
+                    "id": 8400,
+                    "rawDescription": "perkstyle_tooltip_7204",
+                    "rawDisplayName": "perkstyle_displayname_7204"
+                },
+                "secondaryRuneTree": {
+                    "displayName": "Sorcery",
+                    "id": 8200,
+                    "rawDescription": "perkstyle_tooltip_7202",
+                    "rawDisplayName": "perkstyle_displayname_7202"
+                }
+            },
+            "scores": {
+                "assists": 6,
+                "creepScore": 50,
+                "deaths": 4,
+                "kills": 3,
+                "wardScore": 0.0
+            },
+            "skinID": 0,
+            "summonerName": "Dr. Mundo Bot",
+            "summonerSpells": {
+                "summonerSpellOne": {
+                    "displayName": "Heal",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerHeal_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerHeal_DisplayName"
+                },
+                "summonerSpellTwo": {
+                    "displayName": "Teleport",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerTeleport_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerTeleport_DisplayName"
+                }
+            },
+            "team": "ORDER"
+        },
+        {
+            "championName": "Graves",
+            "isBot": true,
+            "isDead": false,
+            "items": [
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Doran's Blade",
+                    "itemID": 1055,
+                    "price": 450,
+                    "rawDescription": "GeneratedTip_Item_1055_Description",
+                    "rawDisplayName": "Item_1055_Name",
+                    "slot": 0
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Berserker's Greaves",
+                    "itemID": 3006,
+                    "price": 500,
+                    "rawDescription": "GeneratedTip_Item_3006_Description",
+                    "rawDisplayName": "Item_3006_Name",
+                    "slot": 1
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Kraken Slayer",
+                    "itemID": 6672,
+                    "price": 625,
+                    "rawDescription": "GeneratedTip_Item_6672_Description",
+                    "rawDisplayName": "Item_6672_Name",
+                    "slot": 2
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Zeal",
+                    "itemID": 3086,
+                    "price": 300,
+                    "rawDescription": "GeneratedTip_Item_3086_Description",
+                    "rawDisplayName": "Item_3086_Name",
+                    "slot": 3
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Dagger",
+                    "itemID": 1042,
+                    "price": 300,
+                    "rawDescription": "GeneratedTip_Item_1042_Description",
+                    "rawDisplayName": "Item_1042_Name",
+                    "slot": 4
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Dagger",
+                    "itemID": 1042,
+                    "price": 300,
+                    "rawDescription": "GeneratedTip_Item_1042_Description",
+                    "rawDisplayName": "Item_1042_Name",
+                    "slot": 5
+                },
+                {
+                    "canUse": true,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Stealth Ward",
+                    "itemID": 3340,
+                    "price": 0,
+                    "rawDescription": "GeneratedTip_Item_3340_Description",
+                    "rawDisplayName": "Item_3340_Name",
+                    "slot": 6
+                }
+            ],
+            "level": 12,
+            "position": "",
+            "rawChampionName": "game_character_displayname_Graves",
+            "respawnTimer": 0.0,
+            "runes": {
+                "keystone": {
+                    "displayName": "Electrocute",
+                    "id": 8112,
+                    "rawDescription": "perk_tooltip_Electrocute",
+                    "rawDisplayName": "perk_displayname_Electrocute"
+                },
+                "primaryRuneTree": {
+                    "displayName": "Domination",
+                    "id": 8100,
+                    "rawDescription": "perkstyle_tooltip_7200",
+                    "rawDisplayName": "perkstyle_displayname_7200"
+                },
+                "secondaryRuneTree": {
+                    "displayName": "Precision",
+                    "id": 8000,
+                    "rawDescription": "perkstyle_tooltip_7201",
+                    "rawDisplayName": "perkstyle_displayname_7201"
+                }
+            },
+            "scores": {
+                "assists": 6,
+                "creepScore": 90,
+                "deaths": 5,
+                "kills": 3,
+                "wardScore": 0.0
+            },
+            "skinID": 0,
+            "summonerName": "Graves Bot",
+            "summonerSpells": {
+                "summonerSpellOne": {
+                    "displayName": "Exhaust",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerExhaust_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerExhaust_DisplayName"
+                },
+                "summonerSpellTwo": {
+                    "displayName": "Ignite",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerDot_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerDot_DisplayName"
+                }
+            },
+            "team": "ORDER"
+        },
+        {
+            "championName": "Rammus",
+            "isBot": true,
+            "isDead": false,
+            "items": [
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Doran's Shield",
+                    "itemID": 1054,
+                    "price": 450,
+                    "rawDescription": "GeneratedTip_Item_1054_Description",
+                    "rawDisplayName": "Item_1054_Name",
+                    "slot": 0
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Mercury's Treads",
+                    "itemID": 3111,
+                    "price": 350,
+                    "rawDescription": "GeneratedTip_Item_3111_Description",
+                    "rawDisplayName": "Item_3111_Name",
+                    "slot": 1
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Sunfire Aegis",
+                    "itemID": 3068,
+                    "price": 700,
+                    "rawDescription": "GeneratedTip_Item_3068_Description",
+                    "rawDisplayName": "Item_3068_Name",
+                    "slot": 2
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Warden's Mail",
+                    "itemID": 3082,
+                    "price": 400,
+                    "rawDescription": "GeneratedTip_Item_3082_Description",
+                    "rawDisplayName": "Item_3082_Name",
+                    "slot": 3
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Cloth Armor",
+                    "itemID": 1029,
+                    "price": 300,
+                    "rawDescription": "GeneratedTip_Item_1029_Description",
+                    "rawDisplayName": "Item_1029_Name",
+                    "slot": 4
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Kindlegem",
+                    "itemID": 3067,
+                    "price": 400,
+                    "rawDescription": "GeneratedTip_Item_3067_Description",
+                    "rawDisplayName": "Item_3067_Name",
+                    "slot": 5
+                },
+                {
+                    "canUse": true,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Stealth Ward",
+                    "itemID": 3340,
+                    "price": 0,
+                    "rawDescription": "GeneratedTip_Item_3340_Description",
+                    "rawDisplayName": "Item_3340_Name",
+                    "slot": 6
+                }
+            ],
+            "level": 13,
+            "position": "",
+            "rawChampionName": "game_character_displayname_Rammus",
+            "respawnTimer": 0.0,
+            "runes": {
+                "keystone": {
+                    "displayName": "Grasp of the Undying",
+                    "id": 8437,
+                    "rawDescription": "perk_tooltip_GraspOfTheUndying",
+                    "rawDisplayName": "perk_displayname_GraspOfTheUndying"
+                },
+                "primaryRuneTree": {
+                    "displayName": "Resolve",
+                    "id": 8400,
+                    "rawDescription": "perkstyle_tooltip_7204",
+                    "rawDisplayName": "perkstyle_displayname_7204"
+                },
+                "secondaryRuneTree": {
+                    "displayName": "Sorcery",
+                    "id": 8200,
+                    "rawDescription": "perkstyle_tooltip_7202",
+                    "rawDisplayName": "perkstyle_displayname_7202"
+                }
+            },
+            "scores": {
+                "assists": 7,
+                "creepScore": 50,
+                "deaths": 2,
+                "kills": 6,
+                "wardScore": 0.0
+            },
+            "skinID": 0,
+            "summonerName": "Rammus Bot",
+            "summonerSpells": {
+                "summonerSpellOne": {
+                    "displayName": "Heal",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerHeal_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerHeal_DisplayName"
+                },
+                "summonerSpellTwo": {
+                    "displayName": "Cleanse",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerBoost_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerBoost_DisplayName"
+                }
+            },
+            "team": "ORDER"
+        },
+        {
+            "championName": "Zilean",
+            "isBot": true,
+            "isDead": false,
+            "items": [
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Doran's Ring",
+                    "itemID": 1056,
+                    "price": 400,
+                    "rawDescription": "GeneratedTip_Item_1056_Description",
+                    "rawDisplayName": "Item_1056_Name",
+                    "slot": 0
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Boots",
+                    "itemID": 1001,
+                    "price": 300,
+                    "rawDescription": "GeneratedTip_Item_1001_Description",
+                    "rawDisplayName": "Item_1001_Name",
+                    "slot": 1
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Luden's Tempest",
+                    "itemID": 6655,
+                    "price": 1250,
+                    "rawDescription": "GeneratedTip_Item_6655_Description",
+                    "rawDisplayName": "Item_6655_Name",
+                    "slot": 2
+                },
+                {
+                    "canUse": true,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Stealth Ward",
+                    "itemID": 3340,
+                    "price": 0,
+                    "rawDescription": "GeneratedTip_Item_3340_Description",
+                    "rawDisplayName": "Item_3340_Name",
+                    "slot": 6
+                }
+            ],
+            "level": 10,
+            "position": "",
+            "rawChampionName": "game_character_displayname_Zilean",
+            "respawnTimer": 0.0,
+            "runes": {
+                "keystone": {
+                    "displayName": "Arcane Comet",
+                    "id": 8229,
+                    "rawDescription": "perk_tooltip_ArcaneComet",
+                    "rawDisplayName": "perk_displayname_ArcaneComet"
+                },
+                "primaryRuneTree": {
+                    "displayName": "Sorcery",
+                    "id": 8200,
+                    "rawDescription": "perkstyle_tooltip_7202",
+                    "rawDisplayName": "perkstyle_displayname_7202"
+                },
+                "secondaryRuneTree": {
+                    "displayName": "Domination",
+                    "id": 8100,
+                    "rawDescription": "perkstyle_tooltip_7200",
+                    "rawDisplayName": "perkstyle_displayname_7200"
+                }
+            },
+            "scores": {
+                "assists": 3,
+                "creepScore": 20,
+                "deaths": 6,
+                "kills": 2,
+                "wardScore": 0.0
+            },
+            "skinID": 0,
+            "summonerName": "Zilean Bot",
+            "summonerSpells": {
+                "summonerSpellOne": {
+                    "displayName": "Exhaust",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerExhaust_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerExhaust_DisplayName"
+                },
+                "summonerSpellTwo": {
+                    "displayName": "Ignite",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerDot_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerDot_DisplayName"
+                }
+            },
+            "team": "ORDER"
+        },
+        {
+            "championName": "Soraka",
+            "isBot": true,
+            "isDead": false,
+            "items": [
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Moonstone Renewer",
+                    "itemID": 6617,
+                    "price": 850,
+                    "rawDescription": "GeneratedTip_Item_6617_Description",
+                    "rawDisplayName": "Item_6617_Name",
+                    "slot": 0
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Boots of Swiftness",
+                    "itemID": 3009,
+                    "price": 600,
+                    "rawDescription": "GeneratedTip_Item_3009_Description",
+                    "rawDisplayName": "Item_3009_Name",
+                    "slot": 1
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Forbidden Idol",
+                    "itemID": 3114,
+                    "price": 550,
+                    "rawDescription": "GeneratedTip_Item_3114_Description",
+                    "rawDisplayName": "Item_3114_Name",
+                    "slot": 2
+                },
+                {
+                    "canUse": true,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Stealth Ward",
+                    "itemID": 3340,
+                    "price": 0,
+                    "rawDescription": "GeneratedTip_Item_3340_Description",
+                    "rawDisplayName": "Item_3340_Name",
+                    "slot": 6
+                }
+            ],
+            "level": 10,
+            "position": "",
+            "rawChampionName": "game_character_displayname_Soraka",
+            "respawnTimer": 0.0,
+            "runes": {
+                "keystone": {
+                    "displayName": "Arcane Comet",
+                    "id": 8229,
+                    "rawDescription": "perk_tooltip_ArcaneComet",
+                    "rawDisplayName": "perk_displayname_ArcaneComet"
+                },
+                "primaryRuneTree": {
+                    "displayName": "Sorcery",
+                    "id": 8200,
+                    "rawDescription": "perkstyle_tooltip_7202",
+                    "rawDisplayName": "perkstyle_displayname_7202"
+                },
+                "secondaryRuneTree": {
+                    "displayName": "Domination",
+                    "id": 8100,
+                    "rawDescription": "perkstyle_tooltip_7200",
+                    "rawDisplayName": "perkstyle_displayname_7200"
+                }
+            },
+            "scores": {
+                "assists": 8,
+                "creepScore": 20,
+                "deaths": 5,
+                "kills": 0,
+                "wardScore": 0.0
+            },
+            "skinID": 0,
+            "summonerName": "Soraka Bot",
+            "summonerSpells": {
+                "summonerSpellOne": {
+                    "displayName": "Heal",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerHeal_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerHeal_DisplayName"
+                },
+                "summonerSpellTwo": {
+                    "displayName": "Ghost",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerHaste_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerHaste_DisplayName"
+                }
+            },
+            "team": "CHAOS"
+        },
+        {
+            "championName": "Sivir",
+            "isBot": true,
+            "isDead": false,
+            "items": [
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Doran's Blade",
+                    "itemID": 1055,
+                    "price": 450,
+                    "rawDescription": "GeneratedTip_Item_1055_Description",
+                    "rawDisplayName": "Item_1055_Name",
+                    "slot": 0
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Berserker's Greaves",
+                    "itemID": 3006,
+                    "price": 500,
+                    "rawDescription": "GeneratedTip_Item_3006_Description",
+                    "rawDisplayName": "Item_3006_Name",
+                    "slot": 1
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Kraken Slayer",
+                    "itemID": 6672,
+                    "price": 625,
+                    "rawDescription": "GeneratedTip_Item_6672_Description",
+                    "rawDisplayName": "Item_6672_Name",
+                    "slot": 2
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Phantom Dancer",
+                    "itemID": 3046,
+                    "price": 900,
+                    "rawDescription": "GeneratedTip_Item_3046_Description",
+                    "rawDisplayName": "Item_3046_Name",
+                    "slot": 3
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Cloak of Agility",
+                    "itemID": 1018,
+                    "price": 600,
+                    "rawDescription": "GeneratedTip_Item_1018_Description",
+                    "rawDisplayName": "Item_1018_Name",
+                    "slot": 4
+                },
+                {
+                    "canUse": true,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Stealth Ward",
+                    "itemID": 3340,
+                    "price": 0,
+                    "rawDescription": "GeneratedTip_Item_3340_Description",
+                    "rawDisplayName": "Item_3340_Name",
+                    "slot": 6
+                }
+            ],
+            "level": 12,
+            "position": "",
+            "rawChampionName": "game_character_displayname_Sivir",
+            "respawnTimer": 0.0,
+            "runes": {
+                "keystone": {
+                    "displayName": "Press the Attack",
+                    "id": 8005,
+                    "rawDescription": "perk_tooltip_PressTheAttack",
+                    "rawDisplayName": "perk_displayname_PressTheAttack"
+                },
+                "primaryRuneTree": {
+                    "displayName": "Precision",
+                    "id": 8000,
+                    "rawDescription": "perkstyle_tooltip_7201",
+                    "rawDisplayName": "perkstyle_displayname_7201"
+                },
+                "secondaryRuneTree": {
+                    "displayName": "Sorcery",
+                    "id": 8200,
+                    "rawDescription": "perkstyle_tooltip_7202",
+                    "rawDisplayName": "perkstyle_displayname_7202"
+                }
+            },
+            "scores": {
+                "assists": 6,
+                "creepScore": 80,
+                "deaths": 3,
+                "kills": 8,
+                "wardScore": 0.0
+            },
+            "skinID": 0,
+            "summonerName": "Sivir Bot",
+            "summonerSpells": {
+                "summonerSpellOne": {
+                    "displayName": "Ignite",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerDot_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerDot_DisplayName"
+                },
+                "summonerSpellTwo": {
+                    "displayName": "Exhaust",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerExhaust_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerExhaust_DisplayName"
+                }
+            },
+            "team": "CHAOS"
+        },
+        {
+            "championName": "Garen",
+            "isBot": true,
+            "isDead": true,
+            "items": [
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Doran's Blade",
+                    "itemID": 1055,
+                    "price": 450,
+                    "rawDescription": "GeneratedTip_Item_1055_Description",
+                    "rawDisplayName": "Item_1055_Name",
+                    "slot": 0
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Boots",
+                    "itemID": 1001,
+                    "price": 300,
+                    "rawDescription": "GeneratedTip_Item_1001_Description",
+                    "rawDisplayName": "Item_1001_Name",
+                    "slot": 1
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Trinity Force",
+                    "itemID": 3078,
+                    "price": 733,
+                    "rawDescription": "GeneratedTip_Item_3078_Description",
+                    "rawDisplayName": "Item_3078_Name",
+                    "slot": 2
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Sterak's Gage",
+                    "itemID": 3053,
+                    "price": 725,
+                    "rawDescription": "GeneratedTip_Item_3053_Description",
+                    "rawDisplayName": "Item_3053_Name",
+                    "slot": 3
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Long Sword",
+                    "itemID": 1036,
+                    "price": 350,
+                    "rawDescription": "GeneratedTip_Item_1036_Description",
+                    "rawDisplayName": "Item_1036_Name",
+                    "slot": 4
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Dagger",
+                    "itemID": 1042,
+                    "price": 300,
+                    "rawDescription": "GeneratedTip_Item_1042_Description",
+                    "rawDisplayName": "Item_1042_Name",
+                    "slot": 5
+                },
+                {
+                    "canUse": true,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Stealth Ward",
+                    "itemID": 3340,
+                    "price": 0,
+                    "rawDescription": "GeneratedTip_Item_3340_Description",
+                    "rawDisplayName": "Item_3340_Name",
+                    "slot": 6
+                }
+            ],
+            "level": 14,
+            "position": "",
+            "rawChampionName": "game_character_displayname_Garen",
+            "respawnTimer": 9.272666931152344,
+            "runes": {
+                "keystone": {
+                    "displayName": "Grasp of the Undying",
+                    "id": 8437,
+                    "rawDescription": "perk_tooltip_GraspOfTheUndying",
+                    "rawDisplayName": "perk_displayname_GraspOfTheUndying"
+                },
+                "primaryRuneTree": {
+                    "displayName": "Resolve",
+                    "id": 8400,
+                    "rawDescription": "perkstyle_tooltip_7204",
+                    "rawDisplayName": "perkstyle_displayname_7204"
+                },
+                "secondaryRuneTree": {
+                    "displayName": "Sorcery",
+                    "id": 8200,
+                    "rawDescription": "perkstyle_tooltip_7202",
+                    "rawDisplayName": "perkstyle_displayname_7202"
+                }
+            },
+            "scores": {
+                "assists": 2,
+                "creepScore": 110,
+                "deaths": 4,
+                "kills": 2,
+                "wardScore": 0.0
+            },
+            "skinID": 0,
+            "summonerName": "Garen Bot",
+            "summonerSpells": {
+                "summonerSpellOne": {
+                    "displayName": "Ghost",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerHaste_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerHaste_DisplayName"
+                },
+                "summonerSpellTwo": {
+                    "displayName": "Exhaust",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerExhaust_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerExhaust_DisplayName"
+                }
+            },
+            "team": "CHAOS"
+        },
+        {
+            "championName": "Jax",
+            "isBot": true,
+            "isDead": false,
+            "items": [
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Doran's Blade",
+                    "itemID": 1055,
+                    "price": 450,
+                    "rawDescription": "GeneratedTip_Item_1055_Description",
+                    "rawDisplayName": "Item_1055_Name",
+                    "slot": 0
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Boots",
+                    "itemID": 1001,
+                    "price": 300,
+                    "rawDescription": "GeneratedTip_Item_1001_Description",
+                    "rawDisplayName": "Item_1001_Name",
+                    "slot": 1
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Trinity Force",
+                    "itemID": 3078,
+                    "price": 733,
+                    "rawDescription": "GeneratedTip_Item_3078_Description",
+                    "rawDisplayName": "Item_3078_Name",
+                    "slot": 2
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Phage",
+                    "itemID": 3044,
+                    "price": 350,
+                    "rawDescription": "GeneratedTip_Item_3044_Description",
+                    "rawDisplayName": "Item_3044_Name",
+                    "slot": 3
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Pickaxe",
+                    "itemID": 1037,
+                    "price": 875,
+                    "rawDescription": "GeneratedTip_Item_1037_Description",
+                    "rawDisplayName": "Item_1037_Name",
+                    "slot": 4
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Ruby Crystal",
+                    "itemID": 1028,
+                    "price": 400,
+                    "rawDescription": "GeneratedTip_Item_1028_Description",
+                    "rawDisplayName": "Item_1028_Name",
+                    "slot": 5
+                },
+                {
+                    "canUse": true,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Stealth Ward",
+                    "itemID": 3340,
+                    "price": 0,
+                    "rawDescription": "GeneratedTip_Item_3340_Description",
+                    "rawDisplayName": "Item_3340_Name",
+                    "slot": 6
+                }
+            ],
+            "level": 11,
+            "position": "",
+            "rawChampionName": "game_character_displayname_Jax",
+            "respawnTimer": 0.0,
+            "runes": {
+                "keystone": {
+                    "displayName": "Press the Attack",
+                    "id": 8005,
+                    "rawDescription": "perk_tooltip_PressTheAttack",
+                    "rawDisplayName": "perk_displayname_PressTheAttack"
+                },
+                "primaryRuneTree": {
+                    "displayName": "Precision",
+                    "id": 8000,
+                    "rawDescription": "perkstyle_tooltip_7201",
+                    "rawDisplayName": "perkstyle_displayname_7201"
+                },
+                "secondaryRuneTree": {
+                    "displayName": "Sorcery",
+                    "id": 8200,
+                    "rawDescription": "perkstyle_tooltip_7202",
+                    "rawDisplayName": "perkstyle_displayname_7202"
+                }
+            },
+            "scores": {
+                "assists": 4,
+                "creepScore": 50,
+                "deaths": 3,
+                "kills": 4,
+                "wardScore": 5.4283647537231449
+            },
+            "skinID": 0,
+            "summonerName": "Jax Bot",
+            "summonerSpells": {
+                "summonerSpellOne": {
+                    "displayName": "Ghost",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerHaste_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerHaste_DisplayName"
+                },
+                "summonerSpellTwo": {
+                    "displayName": "Exhaust",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerExhaust_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerExhaust_DisplayName"
+                }
+            },
+            "team": "CHAOS"
+        },
+        {
+            "championName": "Ziggs",
+            "isBot": true,
+            "isDead": false,
+            "items": [
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Doran's Ring",
+                    "itemID": 1056,
+                    "price": 400,
+                    "rawDescription": "GeneratedTip_Item_1056_Description",
+                    "rawDisplayName": "Item_1056_Name",
+                    "slot": 0
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Sorcerer's Shoes",
+                    "itemID": 3020,
+                    "price": 800,
+                    "rawDescription": "GeneratedTip_Item_3020_Description",
+                    "rawDisplayName": "Item_3020_Name",
+                    "slot": 1
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Luden's Tempest",
+                    "itemID": 6655,
+                    "price": 1250,
+                    "rawDescription": "GeneratedTip_Item_6655_Description",
+                    "rawDisplayName": "Item_6655_Name",
+                    "slot": 2
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Blasting Wand",
+                    "itemID": 1026,
+                    "price": 850,
+                    "rawDescription": "GeneratedTip_Item_1026_Description",
+                    "rawDisplayName": "Item_1026_Name",
+                    "slot": 3
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Giant's Belt",
+                    "itemID": 1011,
+                    "price": 500,
+                    "rawDescription": "GeneratedTip_Item_1011_Description",
+                    "rawDisplayName": "Item_1011_Name",
+                    "slot": 4
+                },
+                {
+                    "canUse": false,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Amplifying Tome",
+                    "itemID": 1052,
+                    "price": 435,
+                    "rawDescription": "GeneratedTip_Item_1052_Description",
+                    "rawDisplayName": "Item_1052_Name",
+                    "slot": 5
+                },
+                {
+                    "canUse": true,
+                    "consumable": false,
+                    "count": 1,
+                    "displayName": "Stealth Ward",
+                    "itemID": 3340,
+                    "price": 0,
+                    "rawDescription": "GeneratedTip_Item_3340_Description",
+                    "rawDisplayName": "Item_3340_Name",
+                    "slot": 6
+                }
+            ],
+            "level": 11,
+            "position": "",
+            "rawChampionName": "game_character_displayname_Ziggs",
+            "respawnTimer": 0.0,
+            "runes": {
+                "keystone": {
+                    "displayName": "Arcane Comet",
+                    "id": 8229,
+                    "rawDescription": "perk_tooltip_ArcaneComet",
+                    "rawDisplayName": "perk_displayname_ArcaneComet"
+                },
+                "primaryRuneTree": {
+                    "displayName": "Sorcery",
+                    "id": 8200,
+                    "rawDescription": "perkstyle_tooltip_7202",
+                    "rawDisplayName": "perkstyle_displayname_7202"
+                },
+                "secondaryRuneTree": {
+                    "displayName": "Domination",
+                    "id": 8100,
+                    "rawDescription": "perkstyle_tooltip_7200",
+                    "rawDisplayName": "perkstyle_displayname_7200"
+                }
+            },
+            "scores": {
+                "assists": 9,
+                "creepScore": 70,
+                "deaths": 2,
+                "kills": 3,
+                "wardScore": 0.0
+            },
+            "skinID": 0,
+            "summonerName": "Ziggs Bot",
+            "summonerSpells": {
+                "summonerSpellOne": {
+                    "displayName": "Ignite",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerDot_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerDot_DisplayName"
+                },
+                "summonerSpellTwo": {
+                    "displayName": "Exhaust",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerExhaust_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerExhaust_DisplayName"
+                }
+            },
+            "team": "CHAOS"
+        }
+    ],
+    "events": {
+        "Events": [
+            {
+                "EventID": 0,
+                "EventName": "GameStart",
+                "EventTime": 0.027100300416350366
+            },
+            {
+                "EventID": 1,
+                "EventName": "MinionsSpawning",
+                "EventTime": 65.04011535644531
+            },
+            {
+                "Assisters": [
+                    "Soraka Bot"
+                ],
+                "EventID": 2,
+                "EventName": "ChampionKill",
+                "EventTime": 176.84495544433595,
+                "KillerName": "Jax Bot",
+                "VictimName": "Dr. Mundo Bot"
+            },
+            {
+                "EventID": 3,
+                "EventName": "FirstBlood",
+                "EventTime": 176.84495544433595,
+                "Recipient": "Jax Bot"
+            },
+            {
+                "Assisters": [
+                    "Ziggs Bot"
+                ],
+                "EventID": 4,
+                "EventName": "ChampionKill",
+                "EventTime": 219.7908172607422,
+                "KillerName": "Sivir Bot",
+                "VictimName": "Zilean Bot"
+            },
+            {
+                "Assisters": [],
+                "EventID": 5,
+                "EventName": "ChampionKill",
+                "EventTime": 246.76109313964845,
+                "KillerName": "Worst Yasuo Iraq",
+                "VictimName": "Garen Bot"
+            },
+            {
+                "Assisters": [
+                    "Dr. Mundo Bot"
+                ],
+                "EventID": 6,
+                "EventName": "ChampionKill",
+                "EventTime": 382.1811218261719,
+                "KillerName": "Rammus Bot",
+                "VictimName": "Soraka Bot"
+            },
+            {
+                "Assisters": [
+                    "Soraka Bot"
+                ],
+                "EventID": 7,
+                "EventName": "ChampionKill",
+                "EventTime": 452.3846435546875,
+                "KillerName": "Jax Bot",
+                "VictimName": "Dr. Mundo Bot"
+            },
+            {
+                "Assisters": [],
+                "EventID": 8,
+                "EventName": "ChampionKill",
+                "EventTime": 521.1155395507813,
+                "KillerName": "Worst Yasuo Iraq",
+                "VictimName": "Garen Bot"
+            },
+            {
+                "Assisters": [
+                    "Sivir Bot"
+                ],
+                "EventID": 9,
+                "EventName": "ChampionKill",
+                "EventTime": 656.6873168945313,
+                "KillerName": "Ziggs Bot",
+                "VictimName": "Graves Bot"
+            },
+            {
+                "Assisters": [
+                    "Dr. Mundo Bot"
+                ],
+                "EventID": 10,
+                "EventName": "ChampionKill",
+                "EventTime": 681.5198974609375,
+                "KillerName": "Rammus Bot",
+                "VictimName": "Jax Bot"
+            },
+            {
+                "Assisters": [
+                    "Dr. Mundo Bot"
+                ],
+                "EventID": 11,
+                "EventName": "ChampionKill",
+                "EventTime": 685.1808471679688,
+                "KillerName": "Rammus Bot",
+                "VictimName": "Soraka Bot"
+            },
+            {
+                "EventID": 12,
+                "EventName": "Multikill",
+                "EventTime": 685.1808471679688,
+                "KillStreak": 2,
+                "KillerName": "Rammus Bot"
+            },
+            {
+                "Assisters": [],
+                "EventID": 13,
+                "EventName": "TurretKilled",
+                "EventTime": 800.3897094726563,
+                "KillerName": "Garen Bot",
+                "TurretKilled": "Turret_T1_C_05_A"
+            },
+            {
+                "EventID": 14,
+                "EventName": "FirstBrick",
+                "EventTime": 800.3897094726563,
+                "KillerName": "Garen Bot"
+            },
+            {
+                "Assisters": [
+                    "Ziggs Bot"
+                ],
+                "EventID": 15,
+                "EventName": "ChampionKill",
+                "EventTime": 903.5853881835938,
+                "KillerName": "Sivir Bot",
+                "VictimName": "Graves Bot"
+            },
+            {
+                "Assisters": [],
+                "EventID": 16,
+                "EventName": "TurretKilled",
+                "EventTime": 957.9266357421875,
+                "KillerName": "Minion_T200L2S29N0180",
+                "TurretKilled": "Turret_T1_L_03_A"
+            },
+            {
+                "Assisters": [],
+                "EventID": 17,
+                "EventName": "ChampionKill",
+                "EventTime": 981.6582641601563,
+                "KillerName": "Sivir Bot",
+                "VictimName": "Graves Bot"
+            },
+            {
+                "Assisters": [],
+                "EventID": 18,
+                "EventName": "ChampionKill",
+                "EventTime": 989.5228881835938,
+                "KillerName": "Sivir Bot",
+                "VictimName": "Zilean Bot"
+            },
+            {
+                "EventID": 19,
+                "EventName": "Multikill",
+                "EventTime": 989.5228881835938,
+                "KillStreak": 2,
+                "KillerName": "Sivir Bot"
+            },
+            {
+                "Assisters": [
+                    "Ziggs Bot"
+                ],
+                "EventID": 20,
+                "EventName": "ChampionKill",
+                "EventTime": 1038.810302734375,
+                "KillerName": "Sivir Bot",
+                "VictimName": "Zilean Bot"
+            },
+            {
+                "Assisters": [],
+                "EventID": 21,
+                "EventName": "TurretKilled",
+                "EventTime": 1206.9398193359376,
+                "KillerName": "Garen Bot",
+                "TurretKilled": "Turret_T1_C_04_A"
+            },
+            {
+                "Assisters": [],
+                "EventID": 22,
+                "EventName": "ChampionKill",
+                "EventTime": 1234.7169189453126,
+                "KillerName": "Rammus Bot",
+                "VictimName": "Sivir Bot"
+            },
+            {
+                "Assisters": [],
+                "EventID": 23,
+                "EventName": "ChampionKill",
+                "EventTime": 1323.3721923828126,
+                "KillerName": "Rammus Bot",
+                "VictimName": "Soraka Bot"
+            },
+            {
+                "Assisters": [
+                    "Soraka Bot",
+                    "Sivir Bot",
+                    "Jax Bot",
+                    "Ziggs Bot"
+                ],
+                "EventID": 24,
+                "EventName": "ChampionKill",
+                "EventTime": 1326.6090087890626,
+                "KillerName": "Garen Bot",
+                "VictimName": "Rammus Bot"
+            },
+            {
+                "Assisters": [],
+                "EventID": 25,
+                "EventName": "TurretKilled",
+                "EventTime": 1338.021484375,
+                "KillerName": "Graves Bot",
+                "TurretKilled": "Turret_T2_L_03_A"
+            },
+            {
+                "Assisters": [
+                    "Garen Bot",
+                    "Jax Bot",
+                    "Ziggs Bot"
+                ],
+                "EventID": 26,
+                "EventName": "ChampionKill",
+                "EventTime": 1340.2200927734376,
+                "KillerName": "Sivir Bot",
+                "VictimName": "Dr. Mundo Bot"
+            },
+            {
+                "Assisters": [
+                    "Graves Bot",
+                    "Zilean Bot"
+                ],
+                "EventID": 27,
+                "EventName": "ChampionKill",
+                "EventTime": 1389.0218505859376,
+                "KillerName": "Rammus Bot",
+                "VictimName": "Ziggs Bot"
+            },
+            {
+                "Assisters": [
+                    "Soraka Bot",
+                    "Sivir Bot",
+                    "Garen Bot",
+                    "Ziggs Bot"
+                ],
+                "EventID": 28,
+                "EventName": "ChampionKill",
+                "EventTime": 1399.253173828125,
+                "KillerName": "Jax Bot",
+                "VictimName": "Rammus Bot"
+            },
+            {
+                "Assisters": [
+                    "Dr. Mundo Bot",
+                    "Graves Bot",
+                    "Rammus Bot"
+                ],
+                "EventID": 29,
+                "EventName": "ChampionKill",
+                "EventTime": 1400.7618408203126,
+                "KillerName": "Zilean Bot",
+                "VictimName": "Sivir Bot"
+            },
+            {
+                "Assisters": [
+                    "Dr. Mundo Bot",
+                    "Graves Bot"
+                ],
+                "EventID": 30,
+                "EventName": "ChampionKill",
+                "EventTime": 1402.17333984375,
+                "KillerName": "Zilean Bot",
+                "VictimName": "Soraka Bot"
+            },
+            {
+                "EventID": 31,
+                "EventName": "Multikill",
+                "EventTime": 1402.17333984375,
+                "KillStreak": 2,
+                "KillerName": "Zilean Bot"
+            },
+            {
+                "Assisters": [
+                    "Sivir Bot"
+                ],
+                "EventID": 32,
+                "EventName": "ChampionKill",
+                "EventTime": 1402.480712890625,
+                "KillerName": "Garen Bot",
+                "VictimName": "Zilean Bot"
+            },
+            {
+                "Assisters": [
+                    "Graves Bot",
+                    "Rammus Bot",
+                    "Zilean Bot"
+                ],
+                "EventID": 33,
+                "EventName": "ChampionKill",
+                "EventTime": 1402.949951171875,
+                "KillerName": "Dr. Mundo Bot",
+                "VictimName": "Jax Bot"
+            },
+            {
+                "Assisters": [
+                    "Dr. Mundo Bot",
+                    "Graves Bot"
+                ],
+                "EventID": 34,
+                "EventName": "ChampionKill",
+                "EventTime": 1426.05810546875,
+                "KillerName": "Worst Yasuo Iraq",
+                "VictimName": "Garen Bot"
+            },
+            {
+                "Assisters": [
+                    "Soraka Bot",
+                    "Ziggs Bot"
+                ],
+                "EventID": 35,
+                "EventName": "ChampionKill",
+                "EventTime": 1458.5860595703126,
+                "KillerName": "Sivir Bot",
+                "VictimName": "Graves Bot"
+            },
+            {
+                "Assisters": [
+                    "Soraka Bot",
+                    "Jax Bot",
+                    "Ziggs Bot"
+                ],
+                "EventID": 36,
+                "EventName": "ChampionKill",
+                "EventTime": 1467.469482421875,
+                "KillerName": "Sivir Bot",
+                "VictimName": "Zilean Bot"
+            },
+            {
+                "EventID": 37,
+                "EventName": "Multikill",
+                "EventTime": 1467.469482421875,
+                "KillStreak": 2,
+                "KillerName": "Sivir Bot"
+            },
+            {
+                "Assisters": [
+                    "Soraka Bot",
+                    "Sivir Bot",
+                    "Ziggs Bot"
+                ],
+                "EventID": 38,
+                "EventName": "ChampionKill",
+                "EventTime": 1468.8336181640626,
+                "KillerName": "Jax Bot",
+                "VictimName": "Dr. Mundo Bot"
+            },
+            {
+                "Assisters": [
+                    "Rammus Bot"
+                ],
+                "EventID": 39,
+                "EventName": "ChampionKill",
+                "EventTime": 1520.151611328125,
+                "KillerName": "Graves Bot",
+                "VictimName": "Soraka Bot"
+            },
+            {
+                "Assisters": [
+                    "Soraka Bot",
+                    "Sivir Bot"
+                ],
+                "EventID": 40,
+                "EventName": "ChampionKill",
+                "EventTime": 1521.8682861328126,
+                "KillerName": "Ziggs Bot",
+                "VictimName": "Zilean Bot"
+            },
+            {
+                "Assisters": [
+                    "Rammus Bot"
+                ],
+                "EventID": 41,
+                "EventName": "ChampionKill",
+                "EventTime": 1522.8367919921876,
+                "KillerName": "Graves Bot",
+                "VictimName": "Sivir Bot"
+            },
+            {
+                "EventID": 42,
+                "EventName": "Multikill",
+                "EventTime": 1522.8367919921876,
+                "KillStreak": 2,
+                "KillerName": "Graves Bot"
+            },
+            {
+                "Assisters": [
+                    "Rammus Bot"
+                ],
+                "EventID": 43,
+                "EventName": "ChampionKill",
+                "EventTime": 1525.9705810546876,
+                "KillerName": "Graves Bot",
+                "VictimName": "Jax Bot"
+            },
+            {
+                "EventID": 44,
+                "EventName": "Multikill",
+                "EventTime": 1525.9705810546876,
+                "KillStreak": 3,
+                "KillerName": "Graves Bot"
+            },
+            {
+                "Assisters": [
+                    "Jax Bot"
+                ],
+                "EventID": 45,
+                "EventName": "ChampionKill",
+                "EventTime": 1528.22998046875,
+                "KillerName": "Ziggs Bot",
+                "VictimName": "Graves Bot"
+            },
+            {
+                "EventID": 46,
+                "EventName": "Multikill",
+                "EventTime": 1528.22998046875,
+                "KillStreak": 2,
+                "KillerName": "Ziggs Bot"
+            },
+            {
+                "Assisters": [
+                    "Graves Bot",
+                    "Rammus Bot",
+                    "Zilean Bot"
+                ],
+                "EventID": 47,
+                "EventName": "ChampionKill",
+                "EventTime": 1530.688232421875,
+                "KillerName": "Dr. Mundo Bot",
+                "VictimName": "Ziggs Bot"
+            },
+            {
+                "Assisters": [
+                    "Rammus Bot"
+                ],
+                "EventID": 48,
+                "EventName": "ChampionKill",
+                "EventTime": 1549.6141357421876,
+                "KillerName": "Dr. Mundo Bot",
+                "VictimName": "Garen Bot"
+            },
+            {
+                "Acer": "Dr. Mundo Bot",
+                "AcingTeam": "ORDER",
+                "EventID": 49,
+                "EventName": "Ace",
+                "EventTime": 1549.6141357421876
+            }
+        ]
+    },
+    "gameData": {
+        "gameMode": "CLASSIC",
+        "gameTime": 1586.7525634765626,
+        "mapName": "Map11",
+        "mapNumber": 11,
+        "mapTerrain": "Default"
+    }
 }
