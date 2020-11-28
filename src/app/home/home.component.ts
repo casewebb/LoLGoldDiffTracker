@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
 
   //FOR REAL GAME VS TESTING JSON
   //IF IN A REAL GAME SET TO true
-  private ONLINE = true;
+  private ONLINE = false;
 
   private alertItems = ["Perfectly Timed Stopwatch", "Commencing Stopwatch", "Stopwatch", "Zhonya's Hourglass", "Trinity Force"]
   private supportItemEvolved = ["Frostfang", "Runesteel Spaulders", "Targon's Buckler", "Harrowing Crescent"]
