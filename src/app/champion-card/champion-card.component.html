@@ -1,7 +1,8 @@
-<div>
-    <div>Item Cost: {{champion.totalGoldVal}}</div>
-    <img src="{{champion.champImageUrl}}">
-
-    <img *ngFor="let image of champion.itemImageUrlArr" src="{{image}}">
+<div class="champ-card">
+    <div>
+        <i class="coin-icon"></i>
+        <span class="coin-val">{{champion.totalGoldVal}}</span>
+    </div>
+    <img class="champ-img" src="{{champion.champImageUrl}}">
+    <img class="item-img" *ngFor="let image of champion.itemImageUrlArr" src="{{image}}">
 </div>
-<h2>---------------------------------------------------------</h2>
