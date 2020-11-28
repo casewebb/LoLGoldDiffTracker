@@ -5,6 +5,7 @@ import { interval } from 'rxjs';
 import { Champion } from '../interfaces/Champion';
 import { Datum, Game, Player } from '../interfaces/LeagueInterfaces';
 import { LeagueApiServiceService } from '../services/league-api-service.service'
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-home',
@@ -13,14 +14,18 @@ import { LeagueApiServiceService } from '../services/league-api-service.service'
 })
 export class HomeComponent implements OnInit {
 
-  public constructor(private leagueService: LeagueApiServiceService) { }
+  public constructor(private leagueService: LeagueApiServiceService, private notifyService: ToastrService) { }
 
   //Time in milliseconds that the item list updates
   private REFRESH_TIME = 3000;
 
   //FOR REAL GAME VS TESTING JSON
-  //IF IN A REAL GAME SET TO FALSE
-  private OFFLINE = true;
+  //IF IN A REAL GAME SET TO true
+  private ONLINE = false;
+
+  private alertItems = ["Perfectly Timed Stopwatch", "Commencing Stopwatch", "Stopwatch", "Zhonya's Hourglass", "Trinity Force"]
+  private supportItemEvolved = ["Frostfang", "Runesteel Spaulders", "Targon's Buckler", "Harrowing Crescent"]
+  alertsSent = [];
 
   redTeamChamps: Array<Champion>;
   blueTeamChamps: Array<Champion>;
@@ -29,6 +34,7 @@ export class HomeComponent implements OnInit {
   currentLeagueVersion: string;
   allItems: Array<Datum>;
   currentGameData: Game;
+  activePlayer: Champion;
 
   searchItem = new FormControl('');
   searchItemName: string;
@@ -75,7 +81,7 @@ export class HomeComponent implements OnInit {
 
   //Build array of all champ items/gold value
   buildAllChamps() {
-    if (this.OFFLINE) {
+    if (!this.ONLINE) {
       this.leagueService.getTestGameData().subscribe(data => {
         this.currentGameData = data;
       })
@@ -92,16 +98,20 @@ export class HomeComponent implements OnInit {
         var champion = new Champion();
         champion.role = player.position;
         champion.summonerName = player.summonerName;
+        champion.champImageUrl = `http://ddragon.leagueoflegends.com/cdn/${this.currentLeagueVersion}/img/champion/${player.rawChampionName.replace('game_character_displayname_', '')}.png`;
         if (player.summonerName == this.currentGameData.activePlayer.summonerName) {
           champion.isActivePlayer = true;
         }
-        champion.champImageUrl = `http://ddragon.leagueoflegends.com/cdn/${this.currentLeagueVersion}/img/champion/${player.rawChampionName.replace('game_character_displayname_', '')}.png`;
+        
         if (player.team == "ORDER") {
-          champion.team = "BLUE";
+          champion.team = "ORDER";
+          if (champion.isActivePlayer)
+            this.activePlayer = champion;
           this.blueTeamChamps.push(champion);
         } else {
-          console.log("Added Red")
-          champion.team = "RED";
+          champion.team = "CHAOS";
+          if (champion.isActivePlayer)
+            this.activePlayer = champion;
           this.redTeamChamps.push(champion);
         }
       }
@@ -132,6 +142,20 @@ export class HomeComponent implements OnInit {
     let itemImgArray = new Array<string>();
 
     for (var item of player.items) {
+      if (this.alertItems.includes(item.displayName) 
+      && !this.alertsSent.includes(player.championName + "_" + item.displayName) 
+      && player.summonerName != this.currentGameData.activePlayer.summonerName
+      && player.team != this.activePlayer.team) {
+        this.notifyService.warning(player.championName + ' purchased ' + item.displayName + ".");
+        this.alertsSent.push(player.championName + "_" + item.displayName);
+      }
+
+      if (this.supportItemEvolved.includes(item.displayName) 
+      && !this.alertsSent.includes(player.championName + "_" + item.displayName)
+      && player.team == this.activePlayer.team) {
+        this.notifyService.info(player.championName + ' upgraded their support item. Consider switching trinkets.');
+        this.alertsSent.push(player.championName + "_" + item.displayName);
+      }
       totalGold += this.getItemCost(item.displayName);
       itemImgArray.push(`http://ddragon.leagueoflegends.com/cdn/${this.currentLeagueVersion}/img/item/${item.itemID}.png`)
     }
