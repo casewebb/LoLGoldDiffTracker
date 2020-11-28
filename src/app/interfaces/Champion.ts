@@ -1,4 +1,5 @@
 export class Champion {
+    summonerName: string;
     champImageUrl: string;
     totalGoldVal: string;
     team: string;

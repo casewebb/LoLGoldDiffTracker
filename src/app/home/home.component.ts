@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { Subscription, interval } from 'rxjs';
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
+import { interval } from 'rxjs';
 import { Champion } from '../interfaces/Champion';
-import { Image, Datum, Game } from '../interfaces/LeagueInterfaces';
+import { Datum, Game, Player } from '../interfaces/LeagueInterfaces';
 import { LeagueApiServiceService } from '../services/league-api-service.service'
 
 @Component({
@@ -84,40 +85,59 @@ export class HomeComponent implements OnInit {
       })
     }
 
-    this.redTeamChamps = new Array<Champion>();
-    this.blueTeamChamps = new Array<Champion>();
-    for (var player of this.currentGameData.allPlayers) {
-      var champion = new Champion();
-      if (player.summonerName == this.currentGameData.activePlayer.summonerName) {
-        champion.isActivePlayer = true;
-      }
-      champion.champImageUrl = `http://ddragon.leagueoflegends.com/cdn/${this.currentLeagueVersion}/img/champion/${player.rawChampionName.replace('game_character_displayname_', '')}.png`;
-
-      let totalGold = 0;
-      let itemImgArray = new Array<string>();
-
-      for (var item of player.items) {
-        totalGold += this.getItemCost(item.displayName);
-        itemImgArray.push(`http://ddragon.leagueoflegends.com/cdn/${this.currentLeagueVersion}/img/item/${item.itemID}.png`)
-      }
-
-      champion.itemImageUrlArr = itemImgArray;
-      champion.totalGoldVal = totalGold.toString();
-      champion.role = player.position;
-
-      if (player.team == "ORDER") {
-        champion.team = "BLUE";
-        this.blueTeamChamps.push(champion);
-      } else {
-        console.log("Added Red")
-        champion.team = "RED";
-        this.redTeamChamps.push(champion);
+    if (!this.blueTeamChamps || this.blueTeamChamps.length < 1) {
+      this.redTeamChamps = new Array<Champion>();
+      this.blueTeamChamps = new Array<Champion>();
+      for (var player of this.currentGameData.allPlayers) {
+        var champion = new Champion();
+        champion.role = player.position;
+        champion.summonerName = player.summonerName;
+        if (player.summonerName == this.currentGameData.activePlayer.summonerName) {
+          champion.isActivePlayer = true;
+        }
+        champion.champImageUrl = `http://ddragon.leagueoflegends.com/cdn/${this.currentLeagueVersion}/img/champion/${player.rawChampionName.replace('game_character_displayname_', '')}.png`;
+        if (player.team == "ORDER") {
+          champion.team = "BLUE";
+          this.blueTeamChamps.push(champion);
+        } else {
+          console.log("Added Red")
+          champion.team = "RED";
+          this.redTeamChamps.push(champion);
+        }
       }
     }
+
+    for (var player of this.currentGameData.allPlayers) {
+      if (player.team == "ORDER") {
+        this.setTeamData(this.blueTeamChamps, player);
+      } else {
+        this.setTeamData(this.redTeamChamps, player);
+      }
+    }
+
   }
 
   //Reference full item list to find the price of an Item
   getItemCost(itemName: string) {
     return this.allItems.filter(item => item.name == itemName)[0].gold.total;
   }
+
+  drop(event: CdkDragDrop<Array<Champion>>, champArray: Array<Champion>) {
+    moveItemInArray(champArray, event.previousIndex, event.currentIndex);
+  }
+
+  setTeamData(list: Array<Champion>, player: Player) {
+    var index = list.findIndex(c => c.summonerName == player.summonerName)
+    let totalGold = 0;
+    let itemImgArray = new Array<string>();
+
+    for (var item of player.items) {
+      totalGold += this.getItemCost(item.displayName);
+      itemImgArray.push(`http://ddragon.leagueoflegends.com/cdn/${this.currentLeagueVersion}/img/item/${item.itemID}.png`)
+    }
+
+    list[index].itemImageUrlArr = itemImgArray;
+    list[index].totalGoldVal = totalGold.toString();
+  }
+
 }
