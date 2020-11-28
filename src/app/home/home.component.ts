@@ -82,6 +82,7 @@ export class HomeComponent implements OnInit {
     if (!this.ONLINE) {
       this.leagueService.getTestGameData().subscribe(data => {
         this.currentGameData = data;
+        this.apiWorking = true;
       })
     } else {
       this.leagueService.getGameData().subscribe((data) => {
