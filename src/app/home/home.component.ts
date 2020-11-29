@@ -141,6 +141,7 @@ export class HomeComponent implements OnInit {
 
   drop(event: CdkDragDrop<Array<Champion>>, champArray: Array<Champion>) {
     moveItemInArray(champArray, event.previousIndex, event.currentIndex);
+    this.getGoldDifferencePerLane();
   }
 
   setTeamData(list: Array<Champion>, player: Player) {
