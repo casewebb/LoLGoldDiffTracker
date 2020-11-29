@@ -87,14 +87,11 @@ h1 {
   color: rgb(6, 221, 24);
   font-family: "Lucida Console", Courier, monospace;
   font-size: 25px;
-  padding-top: 50px;
+  padding-top: 45px;
 }
 
 .losing {
   color: rgb(255, 0, 0);
-  font-family: "Lucida Console", Courier, monospace;
-  font-size: 25px;
-  padding-top: 50px;
 }
 
 .cell {

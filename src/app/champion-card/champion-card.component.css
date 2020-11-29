@@ -1,11 +1,13 @@
 .champ-img {
     width: 64px;
     height: 64px;
+    border-radius: 50%;
     border: 5px solid rgb(0, 0, 0);
 }
 
 .item-img {
     border: 5px solid rgb(0, 0, 0);
+    border-radius: 10px;
 }
 
 .coin-icon {
@@ -23,6 +25,7 @@
 .champ-card {
     background-color: #474747;
     border: 2px solid white;
+    border-radius: 10px;
     min-width: 600px;
     max-width: 600px;
   }
@@ -42,5 +45,5 @@
   }
 
   .active-player {
-    border: 5px solid rgb(9, 255, 0);
+    border: 5px solid rgb(255, 115, 0);
   }
