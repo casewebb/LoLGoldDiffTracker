@@ -1,6 +1,7 @@
 <h1>
     <div>League Version {{currentLeagueVersion}}</div>
 </h1>
+<mat-checkbox (change)="reset()" [(ngModel)]="ONLINE">Online</mat-checkbox>
 
 <mat-tab-group>
     <mat-tab label="In Game Info">
@@ -28,21 +29,8 @@
         </div>
     </mat-tab>
     <mat-tab label="Item Search">
-        <h2 class="item-search-header">
-            <div>
-                <form>
-                    <label for="searchItem">Search Item: </label>
-                    <input id="searchItem" [formControl]="searchItem">
-                    &nbsp;
-                    <button class="button button2" (click)="search()">Search</button>
-                </form>
-            </div>
-            ----------------------------------------------------------
-            <div>{{searchItemName}}
-                <img src="{{searchItemImage}}">
-            </div>
-            <div>Item Cost: {{searchItemCost}}</div>
-            <div>Item Description: {{searchItemDescription}}</div>
-        </h2>
+        <app-item-search 
+        [allItems]="allItems"
+        [currentLeagueVersion]="currentLeagueVersion"></app-item-search>
     </mat-tab>
   </mat-tab-group>

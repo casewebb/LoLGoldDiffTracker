@@ -11,12 +11,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import {MatTabsModule} from '@angular/material/tabs';
 import { ToastrModule } from 'ngx-toastr';
+import { ItemSearchComponent } from './item-search/item-search.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ChampionCardComponent
+    ChampionCardComponent,
+    ItemSearchComponent
   ],
   imports: [
     BrowserModule,
@@ -31,9 +34,10 @@ import { ToastrModule } from 'ngx-toastr';
       closeButton: true,
       tapToDismiss: true,
       extendedTimeOut: 0,
-      timeOut: 30000,
+      timeOut: 60000,
     }),
     MatTabsModule,
+    MatCheckboxModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,16 @@
+<h2 class="item-search-header">
+    <div>
+        <form>
+            <label for="searchItem">Search Item: </label>
+            <input id="searchItem" [formControl]="searchItem">
+            &nbsp;
+            <button class="button button2" (click)="search()">Search</button>
+        </form>
+    </div>
+    ----------------------------------------------------------
+    <div>{{searchItemName}}
+        <img src="{{searchItemImage}}">
+    </div>
+    <div>Item Cost: {{searchItemCost}}</div>
+    <div>Item Description: {{searchItemDescription}}</div>
+</h2>
