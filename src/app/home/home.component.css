@@ -9,27 +9,6 @@
   float: left;
 }
 
-/* .gold-diff-divider {
-  background-color: #000000;
-  min-width: 102px;
-  max-width: 102px;
-  padding-right: 1px;
-  right: 2px;
-
-  position: relative;
-  float: left;
-}
-
-.cell {
-  min-width: 102px;
-  max-width: 102px;
-  height: 102px;
-  text-align: center;
-  border: 2px solid yellow;
-  border-radius: 50%;
-} */
-
-
 .gold-diff-text {
   color: rgb(6, 221, 24);
   font-family: "Lucida Console", Courier, monospace;

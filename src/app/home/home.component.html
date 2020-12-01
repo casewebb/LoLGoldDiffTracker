@@ -12,15 +12,6 @@
                         [isActivePlayerTeam]="champion.team == activePlayer.team"></app-champion-card>
                 </div>
             </div>
-
-            <!-- <div class="gold-diff-divider" [hidden]="!apiWorking">
-                <div class="cell" *ngFor="let value of goldDiffArr">
-                    <div [ngClass]="{'losing': value < 0}" class="gold-diff-text">
-                        {{value}}
-                    </div>
-                </div>
-            </div> -->
-
             <div cdkDropList class="champ-list" [hidden]="!apiWorking"
                 (cdkDropListDropped)="drop($event, redTeamChamps)">
                 <div cdkDrag *ngFor="let champion of redTeamChamps; index as i;">
