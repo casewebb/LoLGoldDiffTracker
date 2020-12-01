@@ -33,7 +33,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
       positionClass: 'toast-bottom-right',
       closeButton: true,
       tapToDismiss: true,
-      extendedTimeOut: 0,
+      extendedTimeOut: 5000,
       timeOut: 60000,
     }),
     MatTabsModule,

@@ -95,6 +95,7 @@ export class HomeComponent implements OnInit {
         var champion = new Champion();
         champion.role = player.position;
         champion.summonerName = player.summonerName;
+        champion.championName = player.championName;
         champion.champImageUrl = `http://ddragon.leagueoflegends.com/cdn/${this.currentLeagueVersion}/img/champion/${player.rawChampionName.replace('game_character_displayname_', '')}.png`;
         if (player.summonerName == this.currentGameData.activePlayer.summonerName) {
           champion.isActivePlayer = true;
@@ -152,6 +153,7 @@ export class HomeComponent implements OnInit {
    * @param player 
    */
   setTeamData(list: Array<Champion>, player: Player) {
+    this.checkForChampLv6Alerts(player);
     var index = list.findIndex(c => c.summonerName == player.summonerName)
     let totalGold = 0;
     let itemImgArray = new Array<string>();
@@ -171,7 +173,6 @@ export class HomeComponent implements OnInit {
     var alertItems = ["Perfectly Timed Stopwatch", "Commencing Stopwatch", "Stopwatch", "Zhonya's Hourglass"];
     if (alertItems.includes(item.displayName)
       && !this.alertsSent.includes(player.championName + "_" + item.displayName)
-      && player.summonerName != this.currentGameData.activePlayer.summonerName
       && player.team != this.activePlayer.team) {
       this.notifyService.warning(player.championName + ' purchased ' + item.displayName + ".");
       this.alertsSent.push(player.championName + "_" + item.displayName);
@@ -184,6 +185,18 @@ export class HomeComponent implements OnInit {
       && player.team == this.activePlayer.team) {
       this.notifyService.info(player.championName + ' upgraded their support item. Consider switching trinkets.');
       this.alertsSent.push(player.championName + "_" + item.displayName);
+    }
+  }
+
+  checkForChampLv6Alerts(player: Player) {
+    var alertChamps = ["Shen", "Pantheon", "Nocturne", "Gangplank", "Galio",
+      "Karthus", "Twisted Fate", "Fiddlesticks", "Tahm Kench"];
+    if (alertChamps.includes(player.championName)
+      && !this.alertsSent.includes(player.championName + "_lvl6")
+      && player.team != this.activePlayer.team
+      && player.level >= 6) {
+      this.notifyService.warning(player.championName + ' reached Level 6.');
+      this.alertsSent.push(player.championName + "_lvl6");
     }
   }
 
