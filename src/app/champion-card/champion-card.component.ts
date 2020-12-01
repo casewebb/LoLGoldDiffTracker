@@ -11,6 +11,8 @@ export class ChampionCardComponent implements OnInit {
   constructor() { }
 
   @Input() champion: Champion;
+  @Input() goldDiff: number;
+  @Input() isActivePlayerTeam: boolean;
 
 
   ngOnInit(): void {

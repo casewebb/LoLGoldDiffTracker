@@ -47,3 +47,12 @@
   .active-player {
     border: 5px solid rgb(255, 115, 0);
   }
+
+  .losing {
+    color: rgb(255, 0, 0);
+  }
+
+  .winning {
+    color: rgb(6, 221, 24);
+  }
+  

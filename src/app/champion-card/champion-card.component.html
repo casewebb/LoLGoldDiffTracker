@@ -2,6 +2,7 @@
     <div>
         <i class="coin-icon"></i>
         <span class="coin-val">{{champion.totalGoldVal}}</span>
+        <span [ngClass]="{'losing': goldDiff < 0, 'winning': goldDiff > 0}" [hidden]="!isActivePlayerTeam"> ({{goldDiff}})</span>
     </div>
     <img [ngClass]="{'active-player': champion.isActivePlayer}" class="champ-img" src="{{champion.champImageUrl}}">
     <img class="item-img" *ngFor="let image of champion.itemImageUrlArr" src="{{image}}">

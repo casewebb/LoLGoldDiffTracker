@@ -7,22 +7,26 @@
     <mat-tab label="In Game Info">
         <div class="champ-container">
             <div cdkDropList class="champ-list" *ngIf="apiWorking" (cdkDropListDropped)="drop($event, blueTeamChamps)">
-                <div cdkDrag *ngFor="let champion of blueTeamChamps">
-                    <app-champion-card [champion]="champion"></app-champion-card>
+                <div cdkDrag *ngFor="let champion of blueTeamChamps; index as i;">
+                    <app-champion-card [champion]="champion"
+                    [goldDiff]="goldDiffArr[i]"
+                    [isActivePlayerTeam]="champion.team == activePlayer.team"></app-champion-card>
                 </div>
             </div>
         
-            <div class="gold-diff-divider" [hidden]="!apiWorking">
+            <!-- <div class="gold-diff-divider" [hidden]="!apiWorking">
                 <div class="cell" *ngFor="let value of goldDiffArr">
                     <div [ngClass]="{'losing': value < 0}" class="gold-diff-text">
                         {{value}}
                     </div>
                 </div>
-            </div>
+            </div> -->
         
             <div cdkDropList class="champ-list" [hidden]="!apiWorking" (cdkDropListDropped)="drop($event, redTeamChamps)">
-                <div cdkDrag *ngFor="let champion of redTeamChamps">
-                    <app-champion-card [champion]="champion"></app-champion-card>
+                <div cdkDrag *ngFor="let champion of redTeamChamps; index as i;">
+                    <app-champion-card [champion]="champion"
+                    [goldDiff]="goldDiffArr[i]"
+                    [isActivePlayerTeam]="champion.team == activePlayer.team"></app-champion-card>
                 </div>
             </div>
             <h2 class="warn" [hidden]="apiWorking"> Waiting on connection to League Client...</h2>

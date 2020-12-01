@@ -4,11 +4,12 @@
 
 .champ-list {
   padding-right: 1px;
+  margin-right: 20px;
   position: relative;
   float: left;
 }
 
-.gold-diff-divider {
+/* .gold-diff-divider {
   background-color: #000000;
   min-width: 102px;
   max-width: 102px;
@@ -37,7 +38,7 @@
   text-align: center;
   border: 2px solid yellow;
   border-radius: 50%;
-}
+} */
 
 .champ-container {
   display: flex;
