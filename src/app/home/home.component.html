@@ -8,12 +8,11 @@
         <div class="champ-container">
             <div cdkDropList class="champ-list" *ngIf="apiWorking" (cdkDropListDropped)="drop($event, blueTeamChamps)">
                 <div cdkDrag *ngFor="let champion of blueTeamChamps; index as i;">
-                    <app-champion-card [champion]="champion"
-                    [goldDiff]="goldDiffArr[i]"
-                    [isActivePlayerTeam]="champion.team == activePlayer.team"></app-champion-card>
+                    <app-champion-card [champion]="champion" [goldDiff]="goldDiffArr[i]"
+                        [isActivePlayerTeam]="champion.team == activePlayer.team"></app-champion-card>
                 </div>
             </div>
-        
+
             <!-- <div class="gold-diff-divider" [hidden]="!apiWorking">
                 <div class="cell" *ngFor="let value of goldDiffArr">
                     <div [ngClass]="{'losing': value < 0}" class="gold-diff-text">
@@ -21,20 +20,22 @@
                     </div>
                 </div>
             </div> -->
-        
-            <div cdkDropList class="champ-list" [hidden]="!apiWorking" (cdkDropListDropped)="drop($event, redTeamChamps)">
+
+            <div cdkDropList class="champ-list" [hidden]="!apiWorking"
+                (cdkDropListDropped)="drop($event, redTeamChamps)">
                 <div cdkDrag *ngFor="let champion of redTeamChamps; index as i;">
-                    <app-champion-card [champion]="champion"
-                    [goldDiff]="goldDiffArr[i]"
-                    [isActivePlayerTeam]="champion.team == activePlayer.team"></app-champion-card>
+                    <app-champion-card [champion]="champion" [goldDiff]="goldDiffArr[i]"
+                        [isActivePlayerTeam]="champion.team == activePlayer.team"></app-champion-card>
                 </div>
             </div>
             <h2 class="warn" [hidden]="apiWorking"> Waiting on connection to League Client...</h2>
         </div>
+        <div [ngClass]="{'gold-diff-text': true, 'losing': goldDiffArr[5] < 0}" [hidden]="apiWorking">
+            <span *ngIf="goldDiffArr[5] < 0">Your team is down <span>{{goldDiffArr[5]}}</span> gold.</span>
+            <span *ngIf="goldDiffArr[5] > 0">Your team is up <span>{{goldDiffArr[5]}}</span> gold.</span>
+        </div>
     </mat-tab>
     <mat-tab label="Item Search">
-        <app-item-search 
-        [allItems]="allItems"
-        [currentLeagueVersion]="currentLeagueVersion"></app-item-search>
+        <app-item-search [allItems]="allItems" [currentLeagueVersion]="currentLeagueVersion"></app-item-search>
     </mat-tab>
-  </mat-tab-group>
+</mat-tab-group>

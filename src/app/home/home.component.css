@@ -20,17 +20,6 @@
   float: left;
 }
 
-.gold-diff-text {
-  color: rgb(6, 221, 24);
-  font-family: "Lucida Console", Courier, monospace;
-  font-size: 25px;
-  padding-top: 45px;
-}
-
-.losing {
-  color: rgb(255, 0, 0);
-}
-
 .cell {
   min-width: 102px;
   max-width: 102px;
@@ -39,6 +28,20 @@
   border: 2px solid yellow;
   border-radius: 50%;
 } */
+
+
+.gold-diff-text {
+  color: rgb(6, 221, 24);
+  font-family: "Lucida Console", Courier, monospace;
+  font-size: 25px;
+  margin-top: 15px;
+  justify-content: center;
+  display: flex;
+}
+
+.losing {
+  color: rgb(255, 0, 0);
+}
 
 .champ-container {
   display: flex;
