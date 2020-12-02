@@ -21,7 +21,7 @@
             </div>
             <h2 class="warn" [hidden]="apiWorking"> Waiting on connection to League Client...</h2>
         </div>
-        <div [ngClass]="{'gold-diff-text': true, 'losing': goldDiffArr[5] < 0}" [hidden]="apiWorking">
+        <div [ngClass]="{'gold-diff-text': true, 'losing': goldDiffArr[5] < 0}" *ngIf="apiWorking">
             <span *ngIf="goldDiffArr[5] < 0">Your team is down <span>{{goldDiffArr[5]}}</span> gold.</span>
             <span *ngIf="goldDiffArr[5] > 0">Your team is up <span>{{goldDiffArr[5]}}</span> gold.</span>
         </div>
