@@ -21,11 +21,13 @@
   margin: auto;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
+  opacity: .8;
 }
 
 .bottom { 
   position: absolute;                  
-  bottom:0;                                                  
+  bottom:0;           
+  opacity: 1;                                       
 } 
 
 .losing {
@@ -93,4 +95,14 @@
 
   .viewport-header {
     position: relative;
+  }
+
+  .on-bg {
+    background-color: black;
+    opacity: .6;
+    display: inline-block;
+  }
+
+  #app-item-search {
+    opacity: 1;
   }

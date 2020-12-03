@@ -1,4 +1,7 @@
-<video src="../../assets/backgrounds/{{backgroundVidNum}}.webm" autoplay loop playsinline muted></video>
+<video id="vid" src="../../assets/backgrounds/{{backgroundVidNum}}.webm" autoplay loop playsinline muted></video>
+<script>
+    document.getElementById('vid').play();
+</script>
 
 
 <h1 class="viewport-header">
@@ -31,6 +34,8 @@
         </div>
     </mat-tab>
     <mat-tab label="Item Search">
-        <app-item-search [allItems]="allItems" [currentLeagueVersion]="currentLeagueVersion"></app-item-search>
+        <div class="on-bg">
+            <app-item-search [allItems]="allItems" [currentLeagueVersion]="currentLeagueVersion"></app-item-search>
+        </div>
     </mat-tab>
 </mat-tab-group>
