@@ -14,7 +14,8 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class HomeComponent implements OnInit {
 
-  public constructor(private leagueService: LeagueApiServiceService, private notifyService: ToastrService) { }
+  public constructor(private leagueService: LeagueApiServiceService,
+     private notifyService: ToastrService) { }
 
   private REFRESH_TIME = 3000;
   ONLINE = false;
@@ -24,6 +25,7 @@ export class HomeComponent implements OnInit {
   blueTeamChamps: Array<Champion>;
   goldDiffArr: number[];
   apiWorking = false;
+  backgroundVidNum: number
 
   currentLeagueVersion: string;
   allItems: Array<Datum>;
@@ -31,6 +33,7 @@ export class HomeComponent implements OnInit {
   activePlayer: Champion;
 
   async ngOnInit() {
+    this.backgroundVidNum = Math.floor(Math.random() * 11) + 1;
     this.retrieveStaticLeagueInformation();
 
     //Update the UI every 15 seconds with latest items
@@ -226,5 +229,4 @@ export class HomeComponent implements OnInit {
     this.goldDiffArr = null;
     this.alertsSent = [];
   }
-
 }

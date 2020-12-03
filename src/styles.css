@@ -9,14 +9,14 @@ html, body { height: 100%;
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 h1 {
-    color: #369;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 150%;
+  color: rgb(89, 230, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 150%;
   }
 h2, h3 {
-    color: #369;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: lighter;
+  color: rgb(89, 230, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
   }
 
 .item-search-header { 
@@ -53,17 +53,6 @@ body, input[type="text"], button {
   cursor: pointer;
 }
 
-.button1 {
-  background-color: white;
-  color: black;
-  border: 2px solid #4CAF50;
-}
-
-.button1:hover {
-  background-color: #4CAF50;
-  color: white;
-}
-
 .button2 {
   background-color: white;
   color: black;
@@ -71,7 +60,7 @@ body, input[type="text"], button {
 }
 
 .button2:hover {
-  background-color: #008CBA;
+  background-color: rgb(89, 230, 255);
   color: white;
 }
 

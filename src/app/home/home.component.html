@@ -1,10 +1,13 @@
-<h1>
+<video src="../../assets/backgrounds/{{backgroundVidNum}}.webm" autoplay loop playsinline muted></video>
+
+
+<h1 class="viewport-header">
     <div>League Version {{currentLeagueVersion}}</div>
 </h1>
-<mat-checkbox (change)="reset()" [(ngModel)]="ONLINE">Online</mat-checkbox>
 
 <mat-tab-group>
     <mat-tab label="In Game Info">
+        <mat-checkbox (change)="reset()" [(ngModel)]="ONLINE">Online</mat-checkbox>
         <div class="champ-container">
             <div cdkDropList class="champ-list" *ngIf="apiWorking" (cdkDropListDropped)="drop($event, blueTeamChamps)">
                 <div cdkDrag *ngFor="let champion of blueTeamChamps; index as i;">
@@ -22,7 +25,8 @@
             <h2 class="warn" [hidden]="apiWorking"> Waiting on connection to League Client...</h2>
         </div>
         <div [ngClass]="{'gold-diff-text': true, 'losing': goldDiffArr[5] < 0}" *ngIf="apiWorking">
-            <span class="bottom" *ngIf="goldDiffArr[5] < 0">Your team is down <span>{{goldDiffArr[6]}}</span> gold.</span>
+            <span class="bottom" *ngIf="goldDiffArr[5] < 0">Your team is down <span>{{goldDiffArr[6]}}</span>
+                gold.</span>
             <span class="bottom" *ngIf="goldDiffArr[5] > 0">Your team is up <span>{{goldDiffArr[6]}}</span> gold.</span>
         </div>
     </mat-tab>
