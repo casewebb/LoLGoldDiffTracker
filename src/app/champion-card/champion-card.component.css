@@ -28,18 +28,20 @@
     border-radius: 10px;
     min-width: 600px;
     max-width: 600px;
+    box-shadow: 5px 10px 10px black;
   }
 
   .red{
+    background-image: url(../../assets/redbg.jpg);
     background-color: #474747;
-    border: 2px solid rgb(255, 0, 0);
+    border: 2px solid black;
     min-width: 600px;
     max-width: 600px;
   }
 
   .blue{
-    background-color: #474747;
-    border: 2px solid rgb(25, 0, 255);
+    background-image: url(../../assets/bluebg.jpeg);
+    border: 2px solid black;
     min-width: 600px;
     max-width: 600px;
   }
@@ -50,9 +52,11 @@
 
   .losing {
     color: rgb(255, 0, 0);
+    background-color: black;
   }
 
   .winning {
     color: rgb(6, 221, 24);
+    background-color: black;
   }
   

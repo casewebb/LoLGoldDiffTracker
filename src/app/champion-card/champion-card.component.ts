@@ -14,9 +14,6 @@ export class ChampionCardComponent implements OnInit {
   @Input() goldDiff: number;
   @Input() isActivePlayerTeam: boolean;
 
-
   ngOnInit(): void {
   }
-
-
 }

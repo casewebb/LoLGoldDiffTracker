@@ -215,6 +215,7 @@ export class HomeComponent implements OnInit {
     this.goldDiffArr.push(this.goldDiffArr.reduce(function (a, b) {
       return a + b;
     }, 0));
+    this.goldDiffArr.push(Math.abs(this.goldDiffArr[5]))
   }
 
   reset() {
