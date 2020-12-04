@@ -1,9 +1,9 @@
 import { Component, ElementRef, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { interval } from 'rxjs';
-import { Champion } from '../interfaces/Champion';
-import { ActiveItemData, Datum, Game, Player } from '../interfaces/LeagueInterfaces';
-import { LeagueApiServiceService } from '../services/league-api-service.service'
+import { Champion } from '../../interfaces/Champion';
+import { ActiveItemData, Datum, Game, Player } from '../../interfaces/LeagueInterfaces';
+import { LeagueApiServiceService } from '../../services/league-api-service.service'
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
   @ViewChild('videoPlayer') videoplayer: ElementRef;
 
   private REFRESH_TIME = 3000;
-  online = false;
+  online = true;
   animateBg = true;
 
   alertsSent = [];

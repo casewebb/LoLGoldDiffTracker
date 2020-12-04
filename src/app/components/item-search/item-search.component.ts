@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { Datum } from '../interfaces/LeagueInterfaces';
+import { Datum } from '../../interfaces/LeagueInterfaces';
 
 @Component({
   selector: 'app-item-search',

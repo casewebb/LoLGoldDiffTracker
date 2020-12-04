@@ -12,7 +12,7 @@
 
 .coin-icon {
     position: relative;
-    content: url("../../assets/coins.png");
+    content: url("../../../assets/coins.png");
     height: 20px;
     width: 20px;
     top: 3px;
@@ -32,7 +32,7 @@
   }
 
   .red {
-    background-image: url(../../assets/redbg.jpg);
+    background-image: url(../../../assets/redbg.jpg);
     background-color: #474747;
     border: 2px solid black;
     min-width: 600px;
@@ -40,7 +40,7 @@
   }
 
   .blue {
-    background-image: url(../../assets/bluebg.jpeg);
+    background-image: url(../../../assets/bluebg.jpeg);
     border: 2px solid black;
     min-width: 600px;
     max-width: 600px;

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Champion } from '../interfaces/Champion';
+import { Champion } from '../../interfaces/Champion';
 
 @Component({
   selector: 'app-champion-card',
