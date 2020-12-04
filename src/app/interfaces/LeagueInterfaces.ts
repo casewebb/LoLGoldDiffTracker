@@ -4,7 +4,6 @@
  * as String Keys
  */
 
- //Game Related Interfaces Below
 export interface Game {
     activePlayer: ActivePlayer;
     allPlayers:   Player[];

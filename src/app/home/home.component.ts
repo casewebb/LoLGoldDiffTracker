@@ -32,6 +32,13 @@ export class HomeComponent implements OnInit {
   currentGameData: Game;
   activePlayer: Champion;
 
+  /**
+   * ngOnInit is a default Angular call - when this Component is called upon
+   * this will run automatically.
+   * 
+   * I have put things here like finding the latest Leage of Legends version 
+   * and gathering all of the data about items.
+   */
   async ngOnInit() {
     this.backgroundVidNum = Math.floor(Math.random() * 11) + 1;
     this.retrieveStaticLeagueInformation();
@@ -65,7 +72,7 @@ export class HomeComponent implements OnInit {
 
   /**
    * Retrieve latest game data from 
-   * League Client
+   * League Client active game
    */
   updateGameData() {
     if (!this.ONLINE) {
@@ -150,7 +157,7 @@ export class HomeComponent implements OnInit {
 
   /**
    * Set each team members total gold and item list
-   * Also triggers and applicable alerts for found items
+   * Also triggers applicable alerts for found items
    * 
    * @param list 
    * @param player 
@@ -215,12 +222,16 @@ export class HomeComponent implements OnInit {
       var index = myTeamArr.indexOf(champ);
       this.goldDiffArr[index] = +champ.totalGoldVal - +enemyTeamArr[index].totalGoldVal;
     }
+    //This is hackyy and probably not optimal lol
+    //I'm adding the total and absolute value of the total at the end of the
     this.goldDiffArr.push(this.goldDiffArr.reduce(function (a, b) {
       return a + b;
     }, 0));
     this.goldDiffArr.push(Math.abs(this.goldDiffArr[5]))
   }
 
+  //If using this for more than 1 game, 
+  //reset everything important
   reset() {
     this.apiWorking = false;
     this.redTeamChamps = null;
