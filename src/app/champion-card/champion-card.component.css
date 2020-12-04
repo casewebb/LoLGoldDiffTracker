@@ -31,7 +31,7 @@
     box-shadow: 5px 10px 10px black;
   }
 
-  .red{
+  .red {
     background-image: url(../../assets/redbg.jpg);
     background-color: #474747;
     border: 2px solid black;
@@ -39,7 +39,7 @@
     max-width: 600px;
   }
 
-  .blue{
+  .blue {
     background-image: url(../../assets/bluebg.jpeg);
     border: 2px solid black;
     min-width: 600px;
