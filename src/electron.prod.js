@@ -12,6 +12,7 @@ const createWindow = () => {
         width: 1600,
         height: 900,
         icon: path.join(__dirname, 'favicon.ico'),
+        allowRunningInsecureContent: true
     });
     win.setMenuBarVisibility(false);
 
@@ -21,6 +22,8 @@ const createWindow = () => {
         protocol: 'file:',
         slashes: true
     }));
+
+    win.webContents.openDevTools();
 
     // Emitted when the window is closed.
     win.on('closed', () => {
