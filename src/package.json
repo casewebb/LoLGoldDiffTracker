@@ -1,8 +1,7 @@
 {
-    "name": "leagueproject",
+    "name": "lol-gold-diff-tracker",
     "productName": "LoL Gold Difference Tracker",
     "version": "1.0.0",
     "description": "LoL Gold Difference Tracker",
-    "main": "electron.prod.js",
-    "license": "MIT"
+    "main": "electron.prod.js"
 }

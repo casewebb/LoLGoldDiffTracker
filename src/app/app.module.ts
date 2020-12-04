@@ -13,13 +13,15 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { ToastrModule } from 'ngx-toastr';
 import { ItemSearchComponent } from './item-search/item-search.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { SettingsComponent } from './settings/settings.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ChampionCardComponent,
-    ItemSearchComponent
+    ItemSearchComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,

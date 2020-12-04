@@ -23,8 +23,6 @@ const createWindow = () => {
         slashes: true
     }));
 
-    win.webContents.openDevTools();
-
     // Emitted when the window is closed.
     win.on('closed', () => {
         // Dereference the window object, usually you would store windows
@@ -38,6 +36,8 @@ const createWindow = () => {
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.on('ready', createWindow);
+app.commandLine.appendSwitch('allow-insecure-localhost', 'true');
+app.commandLine.appendSwitch('ignore-certificate-errors', 'true');
 
 // Quit when all windows are closed.
 app.on('window-all-closed', () => {

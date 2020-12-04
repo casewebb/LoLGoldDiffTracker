@@ -68,30 +68,6 @@
   opacity:1;
 }
 
-.mat-tab-label {
-  min-width: 25px !important;
-  padding: 5px;
-  background-color: transparent;
-  color: rgb(89, 230, 255);
-}
-
-.mat-checkbox {
-  color: rgb(89, 230, 255);
-}
-
-.mat-checkbox-checked
-  .mat-checkbox-layout
-  .mat-checkbox-inner-container
-  .mat-checkbox-background {
-  background-color: greenyellow;
-  }
-
-  .mat-checkbox-layout
-  .mat-checkbox-inner-container
-  .mat-checkbox-background {
-  background-color: gray
-  }
-
   video {
     object-fit: cover;
     width: 100vw;
@@ -108,4 +84,12 @@
   .on-bg {
     background-color: rgba(0, 0, 0, 0.6);
     display: inline-block;
+  }
+
+  .settings-panel {
+    position: relative;
+    float: left;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 500px;
+    width: 400px;
   }

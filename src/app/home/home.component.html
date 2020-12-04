@@ -6,7 +6,6 @@
 
 <mat-tab-group>
     <mat-tab label="In Game Info">
-        <mat-checkbox (change)="reset()" [(ngModel)]="ONLINE">Online</mat-checkbox>
         <div class="champ-container">
             <!-- Blue team list -->
             <div cdkDropList class="champ-list" *ngIf="apiWorking" (cdkDropListDropped)="drop($event, blueTeamChamps)">
@@ -35,6 +34,14 @@
     <mat-tab label="Item Search">
         <div class="on-bg">
             <app-item-search id="app-item-search" [allItems]="allItems" [currentLeagueVersion]="currentLeagueVersion"></app-item-search>
+        </div>
+    </mat-tab>
+    <mat-tab label="Settings">
+        <div class="on-bg">
+            <app-settings id="app-settings" 
+            [(animateBg)]="animateBg"
+            [(online)]="online"
+            (onlineChange)="reset()"></app-settings>
         </div>
     </mat-tab>
 </mat-tab-group>

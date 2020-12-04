@@ -19,7 +19,8 @@ export class HomeComponent implements OnInit {
   @ViewChild('videoPlayer') videoplayer: ElementRef;
 
   private REFRESH_TIME = 3000;
-  ONLINE = false;
+  online = false;
+  animateBg = true;
 
   alertsSent = [];
   redTeamChamps: Array<Champion>;
@@ -52,9 +53,12 @@ export class HomeComponent implements OnInit {
         //This is for a bug where the background video
         //Doesn't autoplay sometimes
         var video: HTMLVideoElement = this.videoplayer.nativeElement;
-        if (video.paused) {
+        if (video.paused && this.animateBg) {
           video.muted;
           video.play();
+        }
+        if (!this.animateBg) {
+          video.pause();
         }
       } catch (err) {
         console.log('Unable connect to League Client');
@@ -83,7 +87,7 @@ export class HomeComponent implements OnInit {
    * League Client active game
    */
   updateGameData() {
-    if (!this.ONLINE) {
+    if (!this.online) {
       this.leagueService.getTestGameData().subscribe(data => {
         this.currentGameData = data;
         this.apiWorking = true;

@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "electron": "electron ./src/electron.dev",
-    "package:win": "npm run build && electron-packager dist league-project --out=packages --platform=win32 --arch=x64 --overwrite"
+    "package:win": "npm run build && electron-packager dist GoldTracker --out=packages --platform=win32 --arch=x64 --overwrite"
   },
   "private": true,
   "dependencies": {

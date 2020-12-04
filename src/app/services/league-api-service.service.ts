@@ -4,6 +4,8 @@ import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Game, ItemData } from '../interfaces/LeagueInterfaces'
 
+//For full exe build.
+//const inGameUrl = "https://localhost:2999/liveclientdata/allgamedata";
 const inGameUrl = "/liveclientdata/allgamedata";
 const versionsUrl = "https://ddragon.leagueoflegends.com/api/versions.json";
 const itemUrl = (version) => `http://ddragon.leagueoflegends.com/cdn/${version}/data/en_US/item.json`
@@ -13,8 +15,6 @@ const itemUrl = (version) => `http://ddragon.leagueoflegends.com/cdn/${version}/
 })
 
 export class LeagueApiServiceService {
-
-
   constructor(private http: HttpClient) { }
 
   getGameData(): Observable<Game> {
