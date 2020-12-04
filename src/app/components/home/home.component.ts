@@ -47,19 +47,9 @@ export class HomeComponent implements OnInit {
     //Update the UI every 15 seconds with latest items
     interval(this.REFRESH_TIME).subscribe(() => {
       try {
+        this.handleBackgroundAutoplay();
         this.updateGameData();
         this.buildAllChamps();
-
-        //This is for a bug where the background video
-        //Doesn't autoplay sometimes
-        var video: HTMLVideoElement = this.videoplayer.nativeElement;
-        if (video.paused && this.animateBg) {
-          video.muted;
-          video.play();
-        }
-        if (!this.animateBg) {
-          video.pause();
-        }
       } catch (err) {
         console.log('Unable connect to League Client');
       }
@@ -261,5 +251,16 @@ export class HomeComponent implements OnInit {
 
     const random = Math.floor(Math.random() * vids.length);
     this.backgroundVid = vids[random];
+  }
+
+  handleBackgroundAutoplay() {
+    var video: HTMLVideoElement = this.videoplayer.nativeElement;
+    if (video.paused && this.animateBg) {
+      video.muted;
+      video.play();
+    }
+    if (!this.animateBg) {
+      video.pause();
+    }
   }
 }
