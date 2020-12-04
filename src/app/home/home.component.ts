@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { interval } from 'rxjs';
 import { Champion } from '../interfaces/Champion';
@@ -13,9 +13,10 @@ import { ToastrService } from 'ngx-toastr';
   encapsulation: ViewEncapsulation.None,
 })
 export class HomeComponent implements OnInit {
-
   public constructor(private leagueService: LeagueApiServiceService,
-     private notifyService: ToastrService) { }
+    private notifyService: ToastrService) { }
+
+  @ViewChild('videoPlayer') videoplayer: ElementRef;
 
   private REFRESH_TIME = 3000;
   ONLINE = false;
@@ -26,7 +27,6 @@ export class HomeComponent implements OnInit {
   goldDiffArr: number[];
   apiWorking = false;
   backgroundVid: string;
-
   currentLeagueVersion: string;
   allItems: Array<Datum>;
   currentGameData: Game;
@@ -48,6 +48,14 @@ export class HomeComponent implements OnInit {
       try {
         this.updateGameData();
         this.buildAllChamps();
+
+        //This is for a bug where the background video
+        //Doesn't autoplay sometimes
+        var video: HTMLVideoElement = this.videoplayer.nativeElement;
+        if (video.paused) {
+          video.muted;
+          video.play();
+        }
       } catch (err) {
         console.log('Unable connect to League Client');
       }
@@ -244,10 +252,10 @@ export class HomeComponent implements OnInit {
   //Picking a random background
   setBackgroundVideo() {
     const vids = ["animated-bilgewater", "animated-freljord",
-     "animated-ionia", "animated-mount-targon", "animated-noxus", "animated-piltover",
+      "animated-ionia", "animated-mount-targon", "animated-noxus", "animated-piltover",
       "harrowing-2014-loop", "animated-shurima", "shurimacrest-loop-with-shurimacrest-intro", "animated-void", "animated-zaun"];
 
-      const random = Math.floor(Math.random() * vids.length);
-      this.backgroundVid = vids[random];
+    const random = Math.floor(Math.random() * vids.length);
+    this.backgroundVid = vids[random];
   }
 }
