@@ -42,11 +42,6 @@ label {
   color:  rgb(89, 230, 255);
 }
 
-.mat-checkbox {
-  color: rgb(89, 230, 255);
-  position: relative;
-}
-
 .mat-checkbox-checked
   .mat-checkbox-layout
   .mat-checkbox-inner-container

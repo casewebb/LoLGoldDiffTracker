@@ -1,16 +1,9 @@
-<div>
-    <mat-checkbox (change)="updateAnimateSetting()" [(ngModel)]="animateBg">Animate Background</mat-checkbox>
-</div>
+<mat-checkbox (change)="updateAnimateSetting()" [(ngModel)]="animateBg">Animate Background</mat-checkbox>
 
 <mat-checkbox (change)="updateOnlineSetting()" [(ngModel)]="online">Online (Offline uses test data)</mat-checkbox>
 
 <div class="alert-item">
     <label>Items that will trigger an alert when purchased by an enemy:</label>
-    <ng-select class="custom" 
-    [items]="itemList" 
-    bindLabel="name" 
-    placeholder="Select Items"
-    multiple="true" 
-    [(ngModel)]="alertItems" 
-    (change)="updateAlertItems()"></ng-select>
+    <ng-select class="custom" [items]="itemList" bindLabel="name" placeholder="Select Items" multiple="true"
+        [(ngModel)]="alertItems" (change)="updateAlertItems()"></ng-select>
 </div>
