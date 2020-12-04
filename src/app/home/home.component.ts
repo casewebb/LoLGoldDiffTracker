@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
   blueTeamChamps: Array<Champion>;
   goldDiffArr: number[];
   apiWorking = false;
-  backgroundVidNum: number
+  backgroundVid: string;
 
   currentLeagueVersion: string;
   allItems: Array<Datum>;
@@ -40,7 +40,7 @@ export class HomeComponent implements OnInit {
    * and gathering all of the data about items.
    */
   async ngOnInit() {
-    this.backgroundVidNum = Math.floor(Math.random() * 11) + 1;
+    this.setBackgroundVideo();
     this.retrieveStaticLeagueInformation();
 
     //Update the UI every 15 seconds with latest items
@@ -239,5 +239,15 @@ export class HomeComponent implements OnInit {
     this.currentGameData = null;
     this.goldDiffArr = null;
     this.alertsSent = [];
+  }
+
+  //Picking a random background
+  setBackgroundVideo() {
+    const vids = ["animated-bilgewater", "animated-freljord",
+     "animated-ionia", "animated-mount-targon", "animated-noxus", "animated-piltover",
+      "harrowing-2014-loop", "animated-shurima", "shurimacrest-loop-with-shurimacrest-intro", "animated-void", "animated-zaun"];
+
+      const random = Math.floor(Math.random() * vids.length);
+      this.backgroundVid = vids[random];
   }
 }
