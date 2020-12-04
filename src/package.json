@@ -1,0 +1,12 @@
+{
+    "name": "lol-gold-diff-tracker",
+    "productName": "LoL Gold Difference Trackern",
+    "version": "1.0.0",
+    "description": "LoL Gold Difference Tracker",
+    "main": "electron.prod.js",
+    "license": "MIT",
+    "devDependencies": {
+        "cross-var": "^1.1.0",
+        "electron-packager": "^15.1.0"
+    }
+}
