@@ -1,9 +1,11 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation } from '@angular/core';
+import { Datum } from 'src/app/interfaces/LeagueInterfaces';
 
 @Component({
   selector: 'app-settings',
   templateUrl: './settings.component.html',
-  styleUrls: ['./settings.component.css']
+  styleUrls: ['./settings.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class SettingsComponent implements OnInit {
 
@@ -15,6 +17,11 @@ export class SettingsComponent implements OnInit {
   @Input() online;
   @Output() onlineChange = new EventEmitter<boolean>();
 
+  @Input() itemList;
+
+  @Input() alertItems;
+  @Output() alertItemsChange = new EventEmitter<Array<string>>();
+
   ngOnInit(): void {
   }
 
@@ -24,5 +31,14 @@ export class SettingsComponent implements OnInit {
 
   updateOnlineSetting() {
     this.onlineChange.emit(this.online);
+  }
+
+  updateAlertItems() {
+    let itemNames = [];
+    this.alertItems.forEach(element => {
+      itemNames.push(element.name);
+    });
+    console.log(itemNames)
+    this.alertItemsChange.emit(itemNames);
   }
 }

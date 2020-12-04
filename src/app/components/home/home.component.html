@@ -41,7 +41,9 @@
             <app-settings id="app-settings" 
             [(animateBg)]="animateBg"
             [(online)]="online"
-            (onlineChange)="reset()"></app-settings>
+            (onlineChange)="reset()"
+            [itemList]="allItems"
+            [(alertItems)]="alertItems"></app-settings>
         </div>
     </mat-tab>
 </mat-tab-group>

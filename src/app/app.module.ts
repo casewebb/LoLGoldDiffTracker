@@ -14,6 +14,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { ItemSearchComponent } from './components/item-search/item-search.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { SettingsComponent } from './components/settings/settings.component';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { SettingsComponent } from './components/settings/settings.component';
     }),
     MatTabsModule,
     MatCheckboxModule,
+    NgSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

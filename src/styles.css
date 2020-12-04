@@ -1,4 +1,5 @@
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import "~@ng-select/ng-select/themes/material.theme.css";
 
 html, body { height: 100%;
   background-color: black;
@@ -265,21 +266,3 @@ body, input[type="text"], button {
   background-color: transparent;
   color: rgb(89, 230, 255);
 }
-
-.mat-checkbox {
-  color: rgb(89, 230, 255);
-  position: relative;
-}
-
-.mat-checkbox-checked
-  .mat-checkbox-layout
-  .mat-checkbox-inner-container
-  .mat-checkbox-background {
-  background-color: greenyellow;
-  }
-
-  .mat-checkbox-layout
-  .mat-checkbox-inner-container
-  .mat-checkbox-background {
-  background-color: gray
-  }

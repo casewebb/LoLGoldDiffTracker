@@ -30,8 +30,11 @@ export class HomeComponent implements OnInit {
   backgroundVid: string;
   currentLeagueVersion: string;
   allItems: Array<Datum>;
+  itemNameArr: Array<string>;
   currentGameData: Game;
   activePlayer: Champion;
+
+  alertItems = ["Perfectly Timed Stopwatch", "Commencing Stopwatch", "Stopwatch", "Zhonya's Hourglass"];
 
   /**
    * ngOnInit is a default Angular call - when this Component is called upon
@@ -64,12 +67,15 @@ export class HomeComponent implements OnInit {
 
     this.leagueService.getAllItemInfoForVersion(this.currentLeagueVersion).subscribe(data => {
       let itemArr = new Array<Datum>();
-      Object.keys(data.data).forEach(key => (
-        itemArr.push(data.data[key])
-      ));
+      let itemNameArr = new Array<string>();
+      Object.keys(data.data).forEach(key => {
+        itemArr.push(data.data[key]);
+        itemNameArr.push(data.data[key].name);
+      });
 
       this.allItems = itemArr;
-    })
+      this.itemNameArr = itemNameArr;
+    });
   }
 
   /**
@@ -181,9 +187,8 @@ export class HomeComponent implements OnInit {
   }
 
   checkForItemAlertsToSend(item: ActiveItemData, player: Player) {
-    //Enemy purchased alert worth item
-    var alertItems = ["Perfectly Timed Stopwatch", "Commencing Stopwatch", "Stopwatch", "Zhonya's Hourglass"];
-    if (alertItems.includes(item.displayName)
+    //Enemy purchased alert worthy item
+    if (this.alertItems.includes(item.displayName)
       && !this.alertsSent.includes(player.championName + "_" + item.displayName)
       && player.team != this.activePlayer.team) {
       this.notifyService.warning(player.championName + ' purchased ' + item.displayName + ".");
