@@ -115,6 +115,9 @@ export class HomeComponent implements OnInit {
         champion.summonerName = player.summonerName;
         champion.championName = player.championName;
         champion.champImageUrl = `http://ddragon.leagueoflegends.com/cdn/${this.currentLeagueVersion}/img/champion/${player.rawChampionName.replace('game_character_displayname_', '')}.png`;
+        if (champion.champImageUrl.includes("FiddleSticks")) {
+          champion.champImageUrl = champion.champImageUrl.replace("FiddleSticks", "Fiddlesticks"); //Custom logic because of name coming back when someone is playing fiddlesticks..
+        }
         if (player.summonerName == this.currentGameData.activePlayer.summonerName) {
           champion.isActivePlayer = true;
         }

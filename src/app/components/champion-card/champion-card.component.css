@@ -8,6 +8,8 @@
 .item-img {
     border: 5px solid rgb(0, 0, 0);
     border-radius: 10px;
+    height: 64px;
+    width: 64px;
 }
 
 .coin-icon {
