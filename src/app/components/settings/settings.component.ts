@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation } from '@angular/core';
+import { LocalStorageService } from 'src/app/services/local-storage.service';
 
 @Component({
   selector: 'app-settings',
@@ -8,7 +9,7 @@ import { Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation } fro
 })
 export class SettingsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private localStorageService: LocalStorageService) { }
 
   @Input() animateBg;
   @Output() animateBgChange = new EventEmitter<boolean>();
@@ -28,10 +29,12 @@ export class SettingsComponent implements OnInit {
   }
 
   updateAnimateSetting() {
+    this.localStorageService.set("animateBg", this.animateBg);
     this.animateBgChange.emit(this.animateBg);
   }
 
   updateOnlineSetting() {
+    this.localStorageService.set("online", this.online);
     this.onlineChange.emit(this.online);
   }
 
@@ -40,6 +43,7 @@ export class SettingsComponent implements OnInit {
     this.alertItems.forEach(element => {
       itemNames.push(element.name);
     });
+    this.localStorageService.set("alertItems", itemNames);
     this.alertItemsChange.emit(itemNames);
   }
 
@@ -48,6 +52,7 @@ export class SettingsComponent implements OnInit {
     this.alertChamps.forEach(element => {
       champNames.push(element.name);
     });
+    this.localStorageService.set("alertChamps", champNames);
     this.alertChampsChange.emit(champNames);
   }
 }

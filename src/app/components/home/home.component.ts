@@ -5,6 +5,7 @@ import { Champion } from '../../interfaces/Champion';
 import { ActiveItemData, ChampData, Datum, Game, Player } from '../../interfaces/LeagueInterfaces';
 import { LeagueApiServiceService } from '../../services/league-api-service.service'
 import { ToastrService } from 'ngx-toastr';
+import { LocalStorageService } from 'src/app/services/local-storage.service';
 
 @Component({
   selector: 'app-home',
@@ -14,13 +15,19 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class HomeComponent implements OnInit {
   public constructor(private leagueService: LeagueApiServiceService,
-    private notifyService: ToastrService) { }
+    private notifyService: ToastrService,
+    private localStorageService: LocalStorageService) { }
 
   @ViewChild('videoPlayer') videoplayer: ElementRef;
 
   private REFRESH_TIME = 3000;
-  online = true;
-  animateBg = true;
+
+  //These settings persist in a browsers LocalStorage (Similar to session storage but this persists even after a browser is closed)
+  online = this.localStorageService.get("online") != null  ? this.localStorageService.get("online") : true;
+  animateBg = this.localStorageService.get("animateBg") != null ? this.localStorageService.get("animateBg") : true;
+  alertItems = this.localStorageService.get("alertItems") ? this.localStorageService.get("alertItems") : ["Perfectly Timed Stopwatch", "Stopwatch", "Zhonya's Hourglass"];
+  alertChamps = this.localStorageService.get("alertChamps") ? this.localStorageService.get("alertChamps") : ["Shen", "Pantheon", "Nocturne", "Gangplank",
+    "Galio", "Karthus", "Twisted Fate", "Fiddlesticks", "Tahm Kench", "Zilean", "Evelynn"];
 
   alertsSent = [];
   redTeamChamps: Array<Champion>;
@@ -33,10 +40,6 @@ export class HomeComponent implements OnInit {
   allChampArr: Array<ChampData>;
   currentGameData: Game;
   activePlayer: Champion;
-
-  alertItems = ["Perfectly Timed Stopwatch", "Stopwatch", "Zhonya's Hourglass"];
-  alertChamps = ["Shen", "Pantheon", "Nocturne", "Gangplank", "Galio",
-    "Karthus", "Twisted Fate", "Fiddlesticks", "Tahm Kench", "Zilean", "Evelynn"];
 
   /**
    * ngOnInit is a default Angular call - when this Component is called upon
