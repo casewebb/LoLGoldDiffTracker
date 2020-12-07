@@ -7,3 +7,9 @@
     <ng-select class="custom" [items]="itemList" bindLabel="name" placeholder="Select Items" multiple="true"
         [(ngModel)]="alertItems" (change)="updateAlertItems()"></ng-select>
 </div>
+
+<div class="alert-item last">
+    <label>Champions that will trigger an alert when reaching level 6:</label>
+    <ng-select class="custom" [items]="champList" bindLabel="name" placeholder="Select Champions" multiple="true"
+        [(ngModel)]="alertChamps" (change)="updateLv6ChampAlerts()"></ng-select>
+</div>

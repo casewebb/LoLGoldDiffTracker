@@ -6,7 +6,10 @@
 
 .alert-item {
   padding: 10px;
-  height: 400px;
+}
+
+.last {
+  height: 300px;
 }
 
 label {

@@ -2,7 +2,7 @@ import { Component, ElementRef, OnInit, ViewChild, ViewEncapsulation } from '@an
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { interval } from 'rxjs';
 import { Champion } from '../../interfaces/Champion';
-import { ActiveItemData, Datum, Game, Player } from '../../interfaces/LeagueInterfaces';
+import { ActiveItemData, ChampData, Datum, Game, Player } from '../../interfaces/LeagueInterfaces';
 import { LeagueApiServiceService } from '../../services/league-api-service.service'
 import { ToastrService } from 'ngx-toastr';
 
@@ -30,11 +30,13 @@ export class HomeComponent implements OnInit {
   backgroundVid: string;
   currentLeagueVersion: string;
   allItems: Array<Datum>;
-  itemNameArr: Array<string>;
+  allChampArr: Array<ChampData>;
   currentGameData: Game;
   activePlayer: Champion;
 
-  alertItems = ["Perfectly Timed Stopwatch", "Commencing Stopwatch", "Stopwatch", "Zhonya's Hourglass"];
+  alertItems = ["Perfectly Timed Stopwatch", "Stopwatch", "Zhonya's Hourglass"];
+  alertChamps = ["Shen", "Pantheon", "Nocturne", "Gangplank", "Galio",
+    "Karthus", "Twisted Fate", "Fiddlesticks", "Tahm Kench"];
 
   /**
    * ngOnInit is a default Angular call - when this Component is called upon
@@ -59,7 +61,7 @@ export class HomeComponent implements OnInit {
     })
   }
 
-  //Retrieve all of the latest League of Legends information
+  //Retrieve all of the latest League of Legends informationF
   async retrieveStaticLeagueInformation() {
     await this.leagueService.getLatestGameVersion().toPromise().then(versions => {
       this.currentLeagueVersion = versions[0];
@@ -67,14 +69,19 @@ export class HomeComponent implements OnInit {
 
     this.leagueService.getAllItemInfoForVersion(this.currentLeagueVersion).subscribe(data => {
       let itemArr = new Array<Datum>();
-      let itemNameArr = new Array<string>();
       Object.keys(data.data).forEach(key => {
         itemArr.push(data.data[key]);
-        itemNameArr.push(data.data[key].name);
       });
-
+      itemArr.sort((a, b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0));
       this.allItems = itemArr;
-      this.itemNameArr = itemNameArr;
+    });
+
+    this.leagueService.getAllChampionInfoForVersion(this.currentLeagueVersion).subscribe(data => {
+      let champArr = new Array<ChampData>();
+      Object.keys(data.data).forEach(key => {
+        champArr.push(data.data[key]);
+      });
+      this.allChampArr = champArr;
     });
   }
 
@@ -209,9 +216,7 @@ export class HomeComponent implements OnInit {
   }
 
   checkForChampLv6Alerts(player: Player) {
-    var alertChamps = ["Shen", "Pantheon", "Nocturne", "Gangplank", "Galio",
-      "Karthus", "Twisted Fate", "Fiddlesticks", "Tahm Kench"];
-    if (alertChamps.includes(player.championName)
+    if (this.alertChamps.includes(player.championName)
       && !this.alertsSent.includes(player.championName + "_lvl6")
       && player.team != this.activePlayer.team
       && player.level >= 6) {
