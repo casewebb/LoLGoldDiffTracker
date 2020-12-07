@@ -36,7 +36,7 @@ export class HomeComponent implements OnInit {
 
   alertItems = ["Perfectly Timed Stopwatch", "Stopwatch", "Zhonya's Hourglass"];
   alertChamps = ["Shen", "Pantheon", "Nocturne", "Gangplank", "Galio",
-    "Karthus", "Twisted Fate", "Fiddlesticks", "Tahm Kench"];
+    "Karthus", "Twisted Fate", "Fiddlesticks", "Tahm Kench", "Zilean", "Evelynn"];
 
   /**
    * ngOnInit is a default Angular call - when this Component is called upon
